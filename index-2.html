@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- index.html (self-contained, no external CSS path required) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://marcoux2026.com/" />
 
-  <!-- Elegant, modern typography (judicial-appropriate serif + clean sans) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -25,216 +25,188 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="/styles.css" />
-</head>
+  <style>
+    :root{
+      --navy:#071a33;
+      --navy-deep:#041122;
 
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+      --accent-red:#b21f2d;
 
-  <header class="site-header" role="banner">
-    <nav class="nav" aria-label="Primary">
-      <a class="nav__brand" href="#top" aria-label="Home">Marcoux 2026</a>
-      <ul class="nav__links" role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#priorities">Priorities</a></li>
-        <li><a href="#yard-signs">Yard Signs</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+      --text-on-dark:rgba(255,255,255,0.92);
+      --muted-on-dark:rgba(255,255,255,0.72);
+      --hair-on-dark:rgba(255,255,255,0.22);
 
-  <main id="main" class="site-main" role="main">
-    <!-- HERO (dark) -->
-    <section id="top" class="section section--dark section--hero" aria-label="Campaign intro">
-      <div class="wrap hero">
-        <p class="hero__kicker">Candidate for Washburn County Circuit Court Judge</p>
+      --text-on-light:#0a1730;
+      --muted-on-light:rgba(10,23,48,0.72);
+      --hair-on-light:rgba(10,23,48,0.18);
 
-        <h1 class="hero__name">Aaron Marcoux</h1>
+      --radius:14px;
+      --shadow:0 14px 34px rgba(0,0,0,0.22);
 
-        <p class="hero__subhead">
-          A steady, fair, and prepared approach… focused on an efficient court that treats every person with respect.
-        </p>
+      --max:1000px;
 
-        <div class="hero__actions" aria-label="Primary actions">
-          <a class="btn btn--primary" href="#yard-signs">Request a Yard Sign</a>
-          <a class="btn btn--ghost" href="#contact">Contact the Campaign</a>
-        </div>
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    }
 
-        <p class="hero__election" aria-label="Election Day">
-          <span class="hero__election-pill">Election Day • April 7, 2026</span>
-        </p>
+    *,*::before,*::after{box-sizing:border-box;}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      line-height:1.55;
+      color:var(--text-on-dark);
+      background:var(--navy-deep);
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
 
-        <p class="hero__locale">Washburn County, WI</p>
-      </div>
-    </section>
+    a{color:inherit;text-underline-offset:.2em;}
+    a:hover{text-decoration-thickness:2px;}
+    :focus-visible{outline:2px solid currentColor;outline-offset:3px;}
 
-    <!-- ABOUT (light) -->
-    <section id="about" class="section section--light" aria-label="About">
-      <div class="wrap about">
-        <div class="about__text">
-          <h2 class="section__title">About Aaron</h2>
+    .skip-link{
+      position:absolute;left:.75rem;top:.75rem;z-index:50;
+      padding:.5rem .75rem;border-radius:999px;
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(0,0,0,.55);
+      transform:translateY(-220%);
+      transition:transform 160ms ease;
+    }
+    .skip-link:focus{transform:translateY(0);}
 
-          <p class="section__body">
-            Aaron Marcoux has served Washburn County as District Attorney since 2019. He has worked across the justice
-            system as a prosecutor and as a Wisconsin Assistant State Public Defender.
-          </p>
+    .site-header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(4,17,34,.78);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:.9rem 1.25rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .nav__brand{
+      font-family:var(--serif);
+      font-weight:600;
+      letter-spacing:.02em;
+      text-decoration:none;
+      font-size:1.15rem;
+      white-space:nowrap;
+    }
+    .nav__links{
+      list-style:none;
+      margin:0;padding:0;
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav__links a{
+      text-decoration:none;
+      color:rgba(255,255,255,.78);
+      font-weight:500;
+    }
+    .nav__links a:hover{color:rgba(255,255,255,.95);}
 
-          <p class="section__body">
-            He lives in Washburn County with his wife and six children and coaches high school basketball.
-          </p>
-        </div>
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 1.25rem;
+    }
 
-        <figure class="about__media">
-          <img
-            src="/images/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
-            alt="Aaron Marcoux headshot"
-            width="800"
-            height="600"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-      </div>
-    </section>
+    section{scroll-margin-top:88px;}
 
-    <!-- PRIORITIES (dark) -->
-    <section id="priorities" class="section section--dark" aria-label="Priorities">
-      <div class="wrap">
-        <h2 class="section__title">Priorities</h2>
-        <p class="section__lead">Experience. Fairness. Respect.</p>
+    .section{
+      padding:clamp(3.6rem,7.5vw,6.25rem) 0;
+    }
 
-        <ul class="bullets" role="list">
-          <li><strong>Prepared and even-tempered</strong> in the courtroom</li>
-          <li><strong>Fair and impartial</strong>… committed to applying the law</li>
-          <li><strong>Efficient case management</strong> to help the court run smoothly and resolve matters in a timely way</li>
-          <li><strong>Respect for every person</strong> who comes before the court</li>
-        </ul>
-      </div>
-    </section>
+    .section--dark{
+      color:var(--text-on-dark);
+      background:
+        radial-gradient(1200px 650px at 50% 20%, rgba(255,255,255,0.08), transparent 60%),
+        linear-gradient(180deg, var(--navy), var(--navy-deep));
+    }
 
-    <!-- YARD SIGNS (light) -->
-    <section id="yard-signs" class="section section--light" aria-label="Yard sign requests">
-      <div class="wrap">
-        <h2 class="section__title">Request a Yard Sign</h2>
-        <p class="section__body">Please complete the form below. All fields are required.</p>
+    .section--light{
+      color:var(--text-on-light);
+      background:#fff;
+    }
 
-        <form class="form" action="https://formspree.io/f/xqearygr" method="post">
-          <div class="form__grid">
-            <div class="form__row">
-              <label for="ys-name">Name</label>
-              <input id="ys-name" name="name" type="text" autocomplete="name" required />
-            </div>
+    .section__title{
+      margin:0 0 1rem;
+      font-family:var(--serif);
+      font-weight:600;
+      font-size:clamp(1.6rem, 1.4vw + 1.15rem, 2.2rem);
+      letter-spacing:.01em;
+    }
+    .section__lead{
+      margin:0 0 .9rem;
+      font-weight:700;
+    }
+    .section__body{
+      margin:0;
+      max-width:75ch;
+      font-size:1.05rem;
+    }
+    .section__body + .section__body{margin-top:.95rem;}
 
-            <div class="form__row">
-              <label for="ys-email">Email</label>
-              <input id="ys-email" name="email" type="email" autocomplete="email" required />
-            </div>
-
-            <div class="form__row">
-              <label for="ys-phone">Phone number</label>
-              <input
-                id="ys-phone"
-                name="phone"
-                type="tel"
-                inputmode="tel"
-                autocomplete="tel"
-                required
-              />
-            </div>
-
-            <div class="form__row form__row--full">
-              <label for="ys-address">Address</label>
-              <input
-                id="ys-address"
-                name="address"
-                type="text"
-                autocomplete="street-address"
-                required
-              />
-            </div>
-
-            <div class="form__row">
-              <label for="ys-qty">Number of signs (1–5)</label>
-              <input
-                id="ys-qty"
-                name="number_of_signs"
-                type="number"
-                min="1"
-                max="5"
-                step="1"
-                required
-              />
-            </div>
-          </div>
-
-          <input type="hidden" name="_subject" value="Yard Sign Request — Marcoux 2026" />
-
-          <button class="btn btn--primary" type="submit">Submit Request</button>
-
-          <p class="form__fineprint">
-            By submitting, you consent to be contacted about your request.
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <!-- CONTACT (dark) -->
-    <section id="contact" class="section section--dark" aria-label="Contact the campaign">
-      <div class="wrap">
-        <h2 class="section__title">Contact the Campaign</h2>
-        <p class="section__body">All fields are required.</p>
-
-        <form class="form" action="https://formspree.io/f/xzdznjyz" method="post">
-          <div class="form__grid">
-            <div class="form__row">
-              <label for="c-name">Name</label>
-              <input id="c-name" name="name" type="text" autocomplete="name" required />
-            </div>
-
-            <div class="form__row">
-              <label for="c-email">Email</label>
-              <input id="c-email" name="email" type="email" autocomplete="email" required />
-            </div>
-
-            <div class="form__row form__row--full">
-              <label for="c-phone">Phone number</label>
-              <input
-                id="c-phone"
-                name="phone"
-                type="tel"
-                inputmode="tel"
-                autocomplete="tel"
-                required
-              />
-            </div>
-
-            <div class="form__row form__row--full">
-              <label for="c-message">Message</label>
-              <textarea id="c-message" name="message" rows="5" required></textarea>
-            </div>
-          </div>
-
-          <input type="hidden" name="_subject" value="Campaign Contact — Marcoux 2026" />
-
-          <button class="btn btn--primary" type="submit">Send Message</button>
-        </form>
-
-        <p class="contact-direct">
-          Or email:
-          <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="wrap">
-      <p class="footer__text">
-        Paid for by Aaron Marcoux (self financed). Aaron Marcoux, Treasurer.<br />
-        Washburn County, WI • <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
-      </p>
-      <p class="footer__text">© 2026 Aaron Marcoux</p>
-    </div>
-  </footer>
-</body>
-</html>
+    /* HERO */
+    .section--hero{
+      padding:clamp(5rem,10vw,7.5rem) 0;
+    }
+    .hero{
+      text-align:center;
+      max-width:980px;
+      margin:0 auto;
+    }
+    .hero__kicker{
+      margin:0 0 .9rem;
+      color:var(--muted-on-dark);
+      font-weight:500;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:.95rem;
+    }
+    .hero__name{
+      margin:0;
+      font-family:var(--serif);
+      font-weight:700;
+      letter-spacing:.01em;
+      line-height:.95;
+      font-size:clamp(3.1rem,6.2vw,4.9rem);
+    }
+    .hero__subhead{
+      margin:1.35rem auto 0;
+      max-width:70ch;
+      color:var(--muted-on-dark);
+      font-size:clamp(1.05rem,1vw + .85rem,1.25rem);
+    }
+    .hero__actions{
+      margin-top:2.1rem;
+      display:flex;
+      gap:.9rem;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .hero__election{
+      margin:2rem 0 0;
+    }
+    .hero__election-pill{
+      display:inline-block;
+      padding:.7rem 1rem;
+      border-radius:999px;
+      font-weight:700;
+      letter-spacing:.03em;
+      background:rgba(178,31,45,.14);
+      border:1px solid rgba(178,31,45,.42);
+      color:rgba(255,255,255,.96);
+      box-shadow:
+        0 10px 26px rgba(0,0,0,.25),
+        0 0 0 7px rgba(178,31,45,.06);
+    }
