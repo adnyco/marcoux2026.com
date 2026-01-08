@@ -210,3 +210,305 @@
         0 10px 26px rgba(0,0,0,.25),
         0 0 0 7px rgba(178,31,45,.06);
     }
+    .hero__locale{
+      margin:1rem 0 0;
+      color:var(--muted-on-dark);
+      letter-spacing:.03em;
+    }
+
+    /* Buttons */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:.85rem 1.1rem;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.22);
+      text-decoration:none;
+      font-weight:700;
+      letter-spacing:.01em;
+      transition:transform 120ms ease, background-color 120ms ease, filter 120ms ease;
+    }
+    .btn:active{transform:translateY(1px);}
+    .btn--primary{
+      background:rgba(255,255,255,.92);
+      color:#081a32;
+      border-color:rgba(255,255,255,.35);
+    }
+    .btn--primary:hover{filter:brightness(.98);}
+    .btn--ghost{
+      background:transparent;
+      color:var(--text-on-dark);
+    }
+    .btn--ghost:hover{background:rgba(255,255,255,.06);}
+
+    /* About layout */
+    .about{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:clamp(1.5rem,3vw,2.75rem);
+      align-items:center;
+    }
+    .about__media{margin:0;}
+    .about__media img{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      box-shadow:0 14px 34px rgba(0,0,0,.18);
+    }
+
+    /* Lists */
+    .bullets{
+      margin:1.2rem 0 0;
+      padding-left:1.2rem;
+      max-width:75ch;
+    }
+    .bullets li{margin:.7rem 0;}
+
+    /* Forms */
+    .form{
+      margin-top:1.5rem;
+      max-width:760px;
+    }
+    .form__grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:.95rem 1rem;
+      margin-bottom:1.1rem;
+    }
+    .form__row{display:grid;gap:.35rem;}
+    .form__row--full{grid-column:1 / -1;}
+    label{font-weight:700;letter-spacing:.01em;}
+    input, textarea{
+      width:100%;
+      padding:.82rem .95rem;
+      border-radius:12px;
+      border:1px solid var(--hair-on-light);
+      background:rgba(255,255,255,.95);
+      color:var(--text-on-light);
+      font:inherit;
+    }
+    .section--dark input,
+    .section--dark textarea{
+      border-color:rgba(255,255,255,.18);
+      background:rgba(0,0,0,.22);
+      color:var(--text-on-dark);
+    }
+    textarea{resize:vertical;}
+    .form__fineprint{
+      margin:.95rem 0 0;
+      color:var(--muted-on-light);
+      max-width:75ch;
+      font-size:.98rem;
+    }
+    .section--dark .form__fineprint{color:var(--muted-on-dark);}
+    .contact-direct{
+      margin:1.35rem 0 0;
+      color:var(--muted-on-dark);
+    }
+
+    /* Footer */
+    .site-footer{
+      padding:2.35rem 0 2.85rem;
+      background:#fff;
+      color:var(--text-on-light);
+      border-top:1px solid rgba(10,23,48,.10);
+    }
+    .footer__text{
+      margin:.35rem 0 0;
+      color:var(--muted-on-light);
+    }
+
+    /* Responsive */
+    @media (max-width: 860px){
+      .about{grid-template-columns:1fr;}
+      .about__media{order:-1;}
+    }
+    @media (max-width: 720px){
+      .form__grid{grid-template-columns:1fr;}
+      .nav{align-items:flex-start;}
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#top" aria-label="Home">Marcoux 2026</a>
+      <ul class="nav__links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#priorities">Priorities</a></li>
+        <li><a href="#yard-signs">Yard Signs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="site-main" role="main">
+    <!-- HERO (dark) -->
+    <section id="top" class="section section--dark section--hero" aria-label="Campaign intro">
+      <div class="wrap hero">
+        <p class="hero__kicker">Candidate for Washburn County Circuit Court Judge</p>
+        <h1 class="hero__name">Aaron Marcoux</h1>
+
+        <p class="hero__subhead">
+          A steady, fair, and prepared approach… focused on an efficient court that treats every person with respect.
+        </p>
+
+        <div class="hero__actions" aria-label="Primary actions">
+          <a class="btn btn--primary" href="#yard-signs">Request a Yard Sign</a>
+          <a class="btn btn--ghost" href="#contact">Contact the Campaign</a>
+        </div>
+
+        <p class="hero__election" aria-label="Election Day">
+          <span class="hero__election-pill">Election Day • April 7, 2026</span>
+        </p>
+
+        <p class="hero__locale">Washburn County, WI</p>
+      </div>
+    </section>
+
+    <!-- ABOUT (light) -->
+    <section id="about" class="section section--light" aria-label="About">
+      <div class="wrap about">
+        <div class="about__text">
+          <h2 class="section__title">About Aaron</h2>
+
+          <p class="section__body">
+            Aaron Marcoux has served Washburn County as District Attorney since 2019. He has worked across the justice
+            system as a prosecutor and as a Wisconsin Assistant State Public Defender.
+          </p>
+
+          <p class="section__body">
+            He lives in Washburn County with his wife and six children and coaches high school basketball.
+          </p>
+        </div>
+
+        <figure class="about__media">
+          <img
+            src="/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
+            alt="Aaron Marcoux headshot"
+            width="800"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- PRIORITIES (dark) -->
+    <section id="priorities" class="section section--dark" aria-label="Priorities">
+      <div class="wrap">
+        <h2 class="section__title">Priorities</h2>
+        <p class="section__lead">Experience. Fairness. Respect.</p>
+
+        <ul class="bullets" role="list">
+          <li><strong>Prepared and even-tempered</strong> in the courtroom</li>
+          <li><strong>Fair and impartial</strong>… committed to applying the law</li>
+          <li><strong>Efficient case management</strong> to help the court run smoothly and resolve matters in a timely way</li>
+          <li><strong>Respect for every person</strong> who comes before the court</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- YARD SIGNS (light) -->
+    <section id="yard-signs" class="section section--light" aria-label="Yard sign requests">
+      <div class="wrap">
+        <h2 class="section__title">Request a Yard Sign</h2>
+        <p class="section__body">Please complete the form below. All fields are required.</p>
+
+        <form class="form" action="https://formspree.io/f/xqearygr" method="post">
+          <div class="form__grid">
+            <div class="form__row">
+              <label for="ys-name">Name</label>
+              <input id="ys-name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="form__row">
+              <label for="ys-email">Email</label>
+              <input id="ys-email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="form__row">
+              <label for="ys-phone">Phone number</label>
+              <input id="ys-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
+            </div>
+
+            <div class="form__row form__row--full">
+              <label for="ys-address">Address</label>
+              <input id="ys-address" name="address" type="text" autocomplete="street-address" required />
+            </div>
+
+            <div class="form__row">
+              <label for="ys-qty">Number of signs (1–5)</label>
+              <input id="ys-qty" name="number_of_signs" type="number" min="1" max="5" step="1" required />
+            </div>
+          </div>
+
+          <input type="hidden" name="_subject" value="Yard Sign Request — Marcoux 2026" />
+
+          <button class="btn btn--primary" type="submit">Submit Request</button>
+
+          <p class="form__fineprint">
+            By submitting, you consent to be contacted about your request.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT (dark) -->
+    <section id="contact" class="section section--dark" aria-label="Contact the campaign">
+      <div class="wrap">
+        <h2 class="section__title">Contact the Campaign</h2>
+        <p class="section__body">All fields are required.</p>
+
+        <form class="form" action="https://formspree.io/f/xzdznjyz" method="post">
+          <div class="form__grid">
+            <div class="form__row">
+              <label for="c-name">Name</label>
+              <input id="c-name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="form__row">
+              <label for="c-email">Email</label>
+              <input id="c-email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="form__row form__row--full">
+              <label for="c-phone">Phone number</label>
+              <input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
+            </div>
+
+            <div class="form__row form__row--full">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" rows="5" required></textarea>
+            </div>
+          </div>
+
+          <input type="hidden" name="_subject" value="Campaign Contact — Marcoux 2026" />
+
+          <button class="btn btn--primary" type="submit">Send Message</button>
+        </form>
+
+        <p class="contact-direct">
+          Or email: <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <p class="footer__text">
+        Paid for by Aaron Marcoux (self financed). Aaron Marcoux, Treasurer.<br />
+        Washburn County, WI • <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
+      </p>
+      <p class="footer__text">© 2026 Aaron Marcoux</p>
+    </div>
+  </footer>
+</body>
+</html>
