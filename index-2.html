@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Aaron Marcoux for Washburn County Circuit Court Judge</title>
+  <title>Aaron Marcoux for Washburn County Circuit Court Judge | 2026</title>
   <meta
     name="description"
     content="Aaron Marcoux for Washburn County Circuit Court Judge. Election Day: April 7, 2026. Washburn County, WI."
@@ -17,7 +17,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://marcoux2026.com/" />
 
-  <link rel="stylesheet" href="/styles.css" />
+  <!-- Elegant, modern typography (judicial-appropriate serif + clean sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
 <body>
@@ -37,61 +45,62 @@
 
   <main id="main" class="site-main" role="main">
     <!-- HERO (dark) -->
-    <section id="top" class="section section--dark" aria-label="Campaign intro">
-      <div class="wrap">
-        <div class="hero">
-          <hr class="rule" />
-          <h1 class="hero__name">Aaron Marcoux</h1>
-          <p class="hero__for">for</p>
-          <h2 class="hero__office">Washburn County Circuit Court Judge</h2>
-          <p class="hero__meta">Election Day • April 7, 2026 • Washburn County, WI</p>
+    <section id="top" class="section section--dark section--hero" aria-label="Campaign intro">
+      <div class="wrap hero">
+        <p class="hero__kicker">Candidate for Washburn County Circuit Court Judge</p>
 
-          <p class="hero__subhead">
-            A steady, fair, and prepared approach… focused on an efficient court that treats every person with respect.
-          </p>
+        <h1 class="hero__name">Aaron Marcoux</h1>
 
-          <hr class="rule" />
+        <p class="hero__subhead">
+          A steady, fair, and prepared approach… focused on an efficient court that treats every person with respect.
+        </p>
 
-          <div class="hero__actions" aria-label="Primary actions">
-            <a class="btn btn--primary" href="#yard-signs">Request a Yard Sign</a>
-            <a class="btn btn--ghost" href="#contact">Contact the Campaign</a>
-          </div>
+        <div class="hero__actions" aria-label="Primary actions">
+          <a class="btn btn--primary" href="#yard-signs">Request a Yard Sign</a>
+          <a class="btn btn--ghost" href="#contact">Contact the Campaign</a>
         </div>
+
+        <p class="hero__election" aria-label="Election Day">
+          <span class="hero__election-pill">Election Day • April 7, 2026</span>
+        </p>
+
+        <p class="hero__locale">Washburn County, WI</p>
       </div>
     </section>
 
     <!-- ABOUT (light) -->
-  <section id="about" class="section section--light" aria-label="About">
-    <div class="wrap about">
-      <div class="about__text">
-        <h3 class="section__title">About Aaron</h3>
-        <p class="section__body">
-        Aaron Marcoux has served Washburn County as District Attorney since 2019. He has worked across the justice system
-        as a prosecutor and as a Wisconsin Assistant State Public Defender.
-        </p>
-      <p class="section__body">
-        He lives in Washburn County with his wife and six children and coaches high school basketball.
-      </p>
-    </div>
+    <section id="about" class="section section--light" aria-label="About">
+      <div class="wrap about">
+        <div class="about__text">
+          <h2 class="section__title">About Aaron</h2>
 
-    <div class="about__image">
-      <img
-        src="/images/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
-        alt="Aaron Marcoux, candidate for Washburn County Circuit Court Judge"
-        width="800"
-        height="600"
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
-  </div>
-</section>
+          <p class="section__body">
+            Aaron Marcoux has served Washburn County as District Attorney since 2019. He has worked across the justice
+            system as a prosecutor and as a Wisconsin Assistant State Public Defender.
+          </p>
 
+          <p class="section__body">
+            He lives in Washburn County with his wife and six children and coaches high school basketball.
+          </p>
+        </div>
+
+        <figure class="about__media">
+          <img
+            src="/images/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
+            alt="Aaron Marcoux headshot"
+            width="800"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
 
     <!-- PRIORITIES (dark) -->
     <section id="priorities" class="section section--dark" aria-label="Priorities">
       <div class="wrap">
-        <h3 class="section__title">Priorities</h3>
+        <h2 class="section__title">Priorities</h2>
         <p class="section__lead">Experience. Fairness. Respect.</p>
 
         <ul class="bullets" role="list">
@@ -106,16 +115,10 @@
     <!-- YARD SIGNS (light) -->
     <section id="yard-signs" class="section section--light" aria-label="Yard sign requests">
       <div class="wrap">
-        <h3 class="section__title">Request a Yard Sign</h3>
-        <p class="section__body">
-          Please complete the form below. All fields are required.
-        </p>
+        <h2 class="section__title">Request a Yard Sign</h2>
+        <p class="section__body">Please complete the form below. All fields are required.</p>
 
-        <form
-          class="form"
-          action="https://formspree.io/f/xqearygr"
-          method="post"
-        >
+        <form class="form" action="https://formspree.io/f/xqearygr" method="post">
           <div class="form__grid">
             <div class="form__row">
               <label for="ys-name">Name</label>
@@ -164,7 +167,6 @@
             </div>
           </div>
 
-          <!-- Optional: helps Formspree email subject line -->
           <input type="hidden" name="_subject" value="Yard Sign Request — Marcoux 2026" />
 
           <button class="btn btn--primary" type="submit">Submit Request</button>
@@ -179,16 +181,10 @@
     <!-- CONTACT (dark) -->
     <section id="contact" class="section section--dark" aria-label="Contact the campaign">
       <div class="wrap">
-        <h3 class="section__title">Contact the Campaign</h3>
-        <p class="section__body">
-          All fields are required.
-        </p>
+        <h2 class="section__title">Contact the Campaign</h2>
+        <p class="section__body">All fields are required.</p>
 
-        <form
-          class="form"
-          action="https://formspree.io/f/xzdznjyz"
-          method="post"
-        >
+        <form class="form" action="https://formspree.io/f/xzdznjyz" method="post">
           <div class="form__grid">
             <div class="form__row">
               <label for="c-name">Name</label>
@@ -224,7 +220,8 @@
         </form>
 
         <p class="contact-direct">
-          Or email: <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
+          Or email:
+          <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
         </p>
       </div>
     </section>
