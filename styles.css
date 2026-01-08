@@ -132,6 +132,34 @@ a:hover{ text-decoration-thickness: 2px; }
 /* Keep anchors from hiding under sticky nav */
 section{ scroll-margin-top: 84px; }
 
+/* ---------- About section layout ---------- */
+.about {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
+
+/* Responsive: stack image below text */
+@media (max-width: 800px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about__image {
+    order: -1; /* image first on mobile for visual interest */
+  }
+}
+
+
 /* ---------- Typography ---------- */
 .section__title{
   margin: 0 0 0.9rem;
