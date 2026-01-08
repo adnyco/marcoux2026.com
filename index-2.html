@@ -7,37 +7,38 @@
   <title>Aaron Marcoux for Washburn County Circuit Court Judge | 2026</title>
   <meta name="description" content="Aaron Marcoux for Washburn County Circuit Court Judge. Election Day: April 7, 2026. Washburn County, WI." />
 
-  <!-- Hosted fonts (judicial-appropriate serif + modern sans) -->
+  <!-- Modern, typography-forward sans serif stack (hosted) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root{
       --navy:#071a33;
       --navy2:#041122;
+
       --ink:#0a1730;
-      --muted:#5a677b;
       --hair:rgba(10,23,48,.18);
 
-      --white: #ffffff;
-      --white-ink: rgba(255,255,255,.92);
-      --white-muted: rgba(255,255,255,.72);
+      --white-ink:rgba(255,255,255,.93);
+      --white-muted:rgba(255,255,255,.74);
 
-      --accent:#b21f2d;
+      --accent:#b21f2d;            /* restrained red highlight */
+      --cta-blue:#0b2a55;          /* blue CTA on light sections */
+      --cta-blue-hover:#0a2449;
 
-      --max: 1040px;
-      --radius: 14px;
+      --max:1080px;
+      --radius:14px;
 
-      --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --display:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --body:"Manrope", var(--display);
     }
 
     *{ box-sizing:border-box; }
     html, body { height:100%; }
     body{
       margin:0;
-      font-family: var(--sans);
+      font-family: var(--body);
       line-height:1.55;
       background: var(--navy2);
       color: var(--white-ink);
@@ -45,26 +46,23 @@
       text-rendering: optimizeLegibility;
     }
 
-    a{ color: inherit; text-underline-offset: .2em; }
+    a{ color:inherit; text-underline-offset:.2em; }
     a:hover{ text-decoration-thickness:2px; }
     :focus-visible{ outline:2px solid currentColor; outline-offset:3px; }
 
     .skip-link{
-      position:absolute; left:.75rem; top:.75rem;
+      position:absolute; left:.75rem; top:.75rem; z-index: 50;
       padding:.5rem .75rem;
       background: rgba(0,0,0,.55);
       border:1px solid rgba(255,255,255,.25);
       border-radius:999px;
       transform: translateY(-220%);
       transition: transform 160ms ease;
-      z-index: 20;
     }
     .skip-link:focus{ transform: translateY(0); }
 
     header{
-      position: sticky;
-      top:0;
-      z-index: 10;
+      position: sticky; top:0; z-index: 20;
       background: rgba(4,17,34,.80);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,.08);
@@ -85,11 +83,11 @@
     }
 
     .brand{
-      font-family: var(--serif);
-      font-weight: 600;
-      letter-spacing:.02em;
+      font-family: var(--display);
+      font-weight: 800;
+      letter-spacing:.01em;
       text-decoration:none;
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       white-space: nowrap;
     }
 
@@ -105,56 +103,78 @@
     .links a{
       text-decoration:none;
       color: rgba(255,255,255,.78);
-      font-weight: 500;
+      font-weight: 600;
+      font-size: .98rem;
     }
     .links a:hover{ color: rgba(255,255,255,.95); }
 
-    section{ scroll-margin-top: 90px; }
+    section{ scroll-margin-top: 92px; }
 
     .section{
-      padding: clamp(3.75rem, 7.5vw, 6.5rem) 0;
+      padding: clamp(3.9rem, 7.5vw, 6.75rem) 0;
     }
 
-    /* Alternating backgrounds */
     .dark{
       background:
-        radial-gradient(1200px 650px at 50% 20%, rgba(255,255,255,.08), transparent 60%),
+        radial-gradient(1200px 650px at 50% 18%, rgba(255,255,255,.09), transparent 62%),
         linear-gradient(180deg, var(--navy), var(--navy2));
       color: var(--white-ink);
     }
     .light{
-      background: var(--white);
+      background: #fff;
       color: var(--ink);
     }
+
+    /* Typography */
+    h1,h2{ font-family: var(--display); margin:0; }
+    p,li,label,input,textarea{ font-family: var(--body); }
+
+    h2{
+      margin:0 0 1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: clamp(1.9rem, 1.6vw + 1.15rem, 2.6rem);
+      line-height: 1.05;
+    }
+
+    p{
+      margin:0;
+      max-width: 78ch;
+      font-size: clamp(1.05rem, .35vw + 1rem, 1.18rem);
+    }
+    p + p{ margin-top: .95rem; }
 
     /* HERO */
     .hero{
       text-align:center;
-      padding-top: clamp(4.75rem, 9vw, 7.5rem);
-      padding-bottom: clamp(4.25rem, 8vw, 6.75rem);
+      padding-top: clamp(5.2rem, 9.5vw, 8rem);
+      padding-bottom: clamp(4.6rem, 8.5vw, 7.2rem);
     }
+
     .kicker{
-      margin:0 0 .9rem;
+      margin:0 0 1rem;
       color: var(--white-muted);
       font-size: .95rem;
-      letter-spacing: .12em;
+      letter-spacing: .14em;
       text-transform: uppercase;
-      font-weight: 500;
-    }
-    h1{
-      margin:0;
-      font-family: var(--serif);
       font-weight: 700;
-      letter-spacing: .01em;
-      line-height: .95;
-      font-size: clamp(3.1rem, 6.2vw, 5rem);
     }
+
+    h1{
+      font-weight: 900;
+      letter-spacing: -0.045em;
+      line-height: 0.92;
+      font-size: clamp(3.6rem, 7.2vw, 6.0rem); /* BIGGER NAME */
+    }
+
     .subhead{
       margin: 1.35rem auto 0;
       max-width: 72ch;
       color: var(--white-muted);
-      font-size: clamp(1.05rem, 1vw + .85rem, 1.25rem);
+      font-size: clamp(1.1rem, 1vw + .95rem, 1.35rem);
+      font-weight: 500;
     }
+
     .actions{
       margin-top: 2.1rem;
       display:flex;
@@ -162,68 +182,72 @@
       justify-content:center;
       flex-wrap: wrap;
     }
+
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding: .88rem 1.15rem;
+      padding: .92rem 1.2rem;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.22);
       text-decoration:none;
-      font-weight: 700;
+      font-family: var(--display);
+      font-weight: 800;
       letter-spacing: .01em;
+      transition: transform 120ms ease, background-color 120ms ease, filter 120ms ease, border-color 120ms ease;
     }
+    .btn:active{ transform: translateY(1px); }
+
+    /* Dark section buttons */
     .btn.primary{
       background: rgba(255,255,255,.92);
       color: #081a32;
       border-color: rgba(255,255,255,.35);
     }
+    .btn.primary:hover{ filter: brightness(.98); }
+
     .btn.ghost{
       background: transparent;
       color: var(--white-ink);
     }
     .btn.ghost:hover{ background: rgba(255,255,255,.06); }
 
-    .election{
-      margin: 2rem 0 0;
-      display:inline-block;
-      padding: .72rem 1.05rem;
-      border-radius: 999px;
-      font-weight: 800;
-      letter-spacing: .03em;
-      background: rgba(178,31,45,.14);
-      border: 1px solid rgba(178,31,45,.42);
-      box-shadow:
-        0 10px 26px rgba(0,0,0,.25),
-        0 0 0 7px rgba(178,31,45,.06);
+    /* Election callout: HARD highlight (NOT a pill, NOT a CTA) */
+    .election-wrap{
+      margin: 2.2rem auto 0;
+      display:flex;
+      justify-content:center;
     }
-    .locale{
-      margin: 1rem 0 0;
-      color: var(--white-muted);
-      letter-spacing:.03em;
+    .election{
+      display:inline-block;
+      padding: .95rem 1.1rem;
+      border-radius: 0; /* hard edges */
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--display);
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      box-shadow: 0 16px 44px rgba(0,0,0,.38);
+    }
+    .election span{
+      display:inline-block;
+      line-height:1;
     }
 
-    /* Section titles */
-    h2{
-      margin:0 0 1rem;
-      font-family: var(--serif);
+    .locale{
+      margin: 1.15rem 0 0;
+      color: var(--white-muted);
+      letter-spacing:.03em;
       font-weight: 600;
-      font-size: clamp(1.75rem, 1.4vw + 1.15rem, 2.35rem);
-      letter-spacing: .01em;
     }
-    p{
-      margin:0;
-      max-width: 75ch;
-      font-size: 1.05rem;
-    }
-    p + p{ margin-top: .95rem; }
 
     /* About layout */
     .about{
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: clamp(1.5rem, 3vw, 2.75rem);
-      align-items: center;
+      grid-template-columns: 1.25fr .75fr;
+      gap: clamp(1.75rem, 3vw, 3rem);
+      align-items: start;
     }
     .about img{
       width:100%;
@@ -237,52 +261,63 @@
     ul{
       margin: 1.25rem 0 0;
       padding-left: 1.2rem;
-      max-width: 75ch;
+      max-width: 78ch;
+      font-size: 1.08rem;
     }
-    li{ margin: .7rem 0; }
+    li{ margin: .75rem 0; }
+    li strong{ font-weight: 800; font-family: var(--display); }
 
     /* Forms */
-    form{ margin-top: 1.5rem; max-width: 780px; }
+    form{ margin-top: 1.6rem; max-width: 820px; }
     .grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: .95rem 1rem;
-      margin-bottom: 1.1rem;
+      gap: 1rem 1.05rem;
+      margin-bottom: 1.2rem;
     }
-    .row{ display:grid; gap:.35rem; }
+    .row{ display:grid; gap:.4rem; }
     .full{ grid-column: 1 / -1; }
 
-    label{ font-weight:700; letter-spacing:.01em; }
+    label{
+      font-family: var(--display);
+      font-weight: 800;
+      letter-spacing:.01em;
+    }
 
     input, textarea{
       width:100%;
-      padding: .84rem .95rem;
+      padding: .9rem 1rem;
       border-radius: 12px;
       border: 1px solid var(--hair);
-      background: rgba(255,255,255,.96);
+      background: rgba(255,255,255,.98);
       color: var(--ink);
       font: inherit;
+      font-size: 1.02rem;
     }
-
     .dark input, .dark textarea{
       border-color: rgba(255,255,255,.18);
       background: rgba(0,0,0,.22);
       color: var(--white-ink);
     }
-
     textarea{ resize: vertical; }
 
+    /* Light section CTA button should be blue */
+    .light .btn.primary{
+      background: var(--cta-blue);
+      color: #ffffff;
+      border-color: rgba(11,42,85,.55);
+    }
+    .light .btn.primary:hover{
+      background: var(--cta-blue-hover);
+      filter: none;
+    }
+
     .fineprint{
-      margin-top: .95rem;
+      margin-top: 1rem;
       color: rgba(10,23,48,.72);
-      font-size: .98rem;
+      font-size: 1rem;
     }
     .dark .fineprint{ color: var(--white-muted); }
-
-    .direct{
-      margin-top: 1.35rem;
-      color: var(--white-muted);
-    }
 
     footer{
       background:#fff;
@@ -292,15 +327,17 @@
     }
     footer p{
       color: rgba(10,23,48,.72);
-      font-size: .98rem;
+      font-size: 1rem;
     }
 
-    @media (max-width: 860px){
+    @media (max-width: 900px){
       .about{ grid-template-columns: 1fr; }
-      .about figure{ order: -1; }
+      figure{ order: -1; }
     }
     @media (max-width: 720px){
       .grid{ grid-template-columns: 1fr; }
+      h1{ font-size: clamp(3.2rem, 10vw, 4.6rem); }
+      .election{ letter-spacing: .06em; }
     }
   </style>
 </head>
@@ -328,6 +365,7 @@
       <div class="wrap">
         <p class="kicker">Candidate for Washburn County Circuit Court Judge</p>
         <h1>Aaron Marcoux</h1>
+
         <p class="subhead">
           A steady, fair, and prepared approach… focused on an efficient court that treats every person with respect.
         </p>
@@ -337,9 +375,11 @@
           <a class="btn ghost" href="#contact">Contact the Campaign</a>
         </div>
 
-        <p class="hero__election" aria-label="Election Day">
-          <span class="election">Election Day • April 7, 2026</span>
-        </p>
+        <div class="election-wrap" aria-label="Election Day">
+          <div class="election" role="note">
+            <span>Election Day • April 7, 2026</span>
+          </div>
+        </div>
 
         <p class="locale">Washburn County, WI</p>
       </div>
@@ -350,12 +390,26 @@
       <div class="wrap about">
         <div>
           <h2>About Aaron</h2>
+
           <p>
-            Aaron Marcoux has served Washburn County as District Attorney since 2019. He has worked across the justice
-            system as a prosecutor and as a Wisconsin Assistant State Public Defender.
+            Aaron Marcoux is the Washburn County District Attorney, a role he has held since 2019 and won by election in 2020 and 2024.
           </p>
           <p>
-            He lives in Washburn County with his wife and six children and coaches high school basketball.
+            He brings experience across the justice system, beginning his legal career with the Wisconsin State Public Defender’s Office in Ashland,
+            serving Northern Wisconsin communities from 2010–2015.
+          </p>
+          <p>
+            He later served as an Assistant District Attorney in Sawyer County (2015–2019) before returning to serve Washburn County.
+          </p>
+          <p>
+            A Rice Lake High School graduate, Aaron earned degrees from UW–Eau Claire Barron County and UW–Milwaukee, and graduated from the
+            University of Wyoming College of Law.
+          </p>
+          <p>
+            In 2024, he was named UW–Eau Claire Barron County’s Distinguished Alumnus.
+          </p>
+          <p>
+            Aaron lives in Washburn County with his wife, Elizabeth, and their six children and coaches school athletics locally.
           </p>
         </div>
 
@@ -376,7 +430,7 @@
     <section id="priorities" class="section dark" aria-label="Priorities">
       <div class="wrap">
         <h2>Priorities</h2>
-        <p class="section__lead" style="margin:0; font-weight:700;">Experience. Fairness. Respect.</p>
+        <p style="margin:0; font-family: var(--display); font-weight:800;">Experience. Fairness. Respect.</p>
 
         <ul role="list">
           <li><strong>Prepared and even-tempered</strong> in the courtroom</li>
@@ -463,8 +517,6 @@
 
           <button class="btn primary" type="submit">Send Message</button>
         </form>
-
-        <p class="direct">Or email: <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a></p>
       </div>
     </section>
   </main>
