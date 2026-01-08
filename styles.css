@@ -1,0 +1,341 @@
+/* css/styles.css */
+
+/* ---------- Tokens ---------- */
+:root{
+  --navy: #071a33;
+  --navy-deep: #041122;
+
+  --text-on-dark: rgba(255,255,255,0.92);
+  --muted-on-dark: rgba(255,255,255,0.72);
+  --hair-on-dark: rgba(255,255,255,0.22);
+
+  --text-on-light: #0a1730;
+  --muted-on-light: rgba(10, 23, 48, 0.72);
+  --hair-on-light: rgba(10, 23, 48, 0.18);
+
+  --panel-light: rgba(255,255,255,0.88);
+  --panel-dark: rgba(255,255,255,0.06);
+
+  --radius: 14px;
+  --shadow: 0 14px 34px rgba(0,0,0,0.25);
+
+  --max: 960px;
+
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  font-family: var(--sans);
+  line-height: 1.55;
+  color: var(--text-on-dark);
+  background: var(--navy-deep);
+}
+
+a{
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+a:hover{ text-decoration-thickness: 2px; }
+
+:focus-visible{
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Skip link */
+.skip-link{
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.55);
+  transform: translateY(-220%);
+  transition: transform 160ms ease;
+}
+.skip-link:focus{ transform: translateY(0); }
+
+/* ---------- Header / Nav ---------- */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(4, 17, 34, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__brand{
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.nav__links{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.nav__links a{
+  text-decoration: none;
+  color: rgba(255,255,255,0.78);
+}
+.nav__links a:hover{ color: rgba(255,255,255,0.95); }
+
+/* ---------- Layout helpers ---------- */
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.section{
+  padding: clamp(3.25rem, 7vw, 5.75rem) 0;
+}
+
+/* Alternating sections */
+.section--dark{
+  color: var(--text-on-dark);
+  background:
+    radial-gradient(1200px 650px at 50% 20%, rgba(255,255,255,0.08), transparent 60%),
+    linear-gradient(180deg, var(--navy), var(--navy-deep));
+}
+
+.section--light{
+  color: var(--text-on-light);
+  background: #ffffff;
+}
+
+/* Keep anchors from hiding under sticky nav */
+section{ scroll-margin-top: 84px; }
+
+/* ---------- Typography ---------- */
+.section__title{
+  margin: 0 0 0.9rem;
+  font-size: clamp(1.35rem, 1.3vw + 1rem, 1.75rem);
+  letter-spacing: 0.01em;
+}
+
+.section__lead{
+  margin: 0 0 0.85rem;
+  font-weight: 700;
+}
+
+.section__body{
+  margin: 0;
+  max-width: 75ch;
+}
+.section__body + .section__body{ margin-top: 0.9rem; }
+
+/* ---------- Hero ---------- */
+.hero{
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: var(--panel-dark);
+  box-shadow: var(--shadow);
+}
+
+.rule{
+  border: 0;
+  height: 1px;
+  background: var(--hair-on-dark);
+  margin: 1.6rem 0;
+}
+
+.hero__name{
+  margin: 0;
+  font-size: clamp(2.2rem, 4.3vw, 3.2rem);
+  font-weight: 850;
+  letter-spacing: 0.01em;
+}
+
+.hero__for{
+  margin: 0.6rem 0;
+  font-weight: 350;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-on-dark);
+}
+
+.hero__office{
+  margin: 0;
+  font-size: clamp(1.15rem, 2.1vw, 1.55rem);
+  font-weight: 750;
+}
+
+.hero__meta{
+  margin: 0.85rem 0 0;
+  color: var(--muted-on-dark);
+}
+
+.hero__subhead{
+  margin: 1rem auto 0;
+  max-width: 62ch;
+  color: var(--muted-on-dark);
+  font-size: 1.05rem;
+}
+
+/* ---------- Buttons ---------- */
+.hero__actions{
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.22);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.btn--primary{
+  background: rgba(255,255,255,0.92);
+  color: #081a32;
+  border-color: rgba(255,255,255,0.35);
+}
+.btn--primary:hover{ filter: brightness(0.98); }
+
+.btn--ghost{
+  background: transparent;
+  color: var(--text-on-dark);
+}
+.btn--ghost:hover{ background: rgba(255,255,255,0.06); }
+
+/* Light section buttons should still look crisp if used later */
+.section--light .btn{
+  border-color: rgba(10, 23, 48, 0.18);
+}
+.section--light .btn--ghost{
+  color: var(--text-on-light);
+}
+.section--light .btn--ghost:hover{
+  background: rgba(10, 23, 48, 0.06);
+}
+
+/* ---------- Lists ---------- */
+.bullets{
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  max-width: 75ch;
+}
+.bullets li{ margin: 0.65rem 0; }
+
+/* Ensure readable list text on dark */
+.section--dark .bullets{ color: var(--text-on-dark); }
+.section--dark .bullets strong{ color: var(--text-on-dark); }
+
+/* ---------- Forms ---------- */
+.form{
+  margin-top: 1.4rem;
+  max-width: 720px;
+}
+
+.form__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.form__row{
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form__row--full{
+  grid-column: 1 / -1;
+}
+
+label{
+  font-weight: 700;
+}
+
+input, textarea, select{
+  width: 100%;
+  padding: 0.78rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--hair-on-light);
+  background: rgba(255,255,255,0.92);
+  color: var(--text-on-light);
+  font: inherit;
+}
+
+.section--dark input,
+.section--dark textarea,
+.section--dark select{
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.22);
+  color: var(--text-on-dark);
+}
+
+textarea{ resize: vertical; }
+
+.form__fineprint{
+  margin: 0.9rem 0 0;
+  color: var(--muted-on-light);
+  max-width: 70ch;
+}
+
+.section--dark .form__fineprint{
+  color: var(--muted-on-dark);
+}
+
+.contact-direct{
+  margin: 1.25rem 0 0;
+  color: var(--muted-on-dark);
+}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  padding: 2.25rem 0 2.75rem;
+  background: #ffffff;
+  color: var(--text-on-light);
+  border-top: 1px solid rgba(10, 23, 48, 0.10);
+}
+
+.footer__text{
+  margin: 0.35rem 0 0;
+  color: var(--muted-on-light);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px){
+  .form__grid{
+    grid-template-columns: 1fr;
+  }
+}
