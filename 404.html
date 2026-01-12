@@ -1,0 +1,164 @@
+<!-- 404.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Page Not Found | Marcoux 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Page not found — Aaron Marcoux for Washburn County Circuit Court Judge. Election Day: April 7, 2026." />
+
+  <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCPW3QVEV3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LCPW3QVEV3');
+    </script>
+  
+  <style>
+    /* --- Base reset --- */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* --- Page styling --- */
+    body{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0b1f3a; /* dark judicial blue */
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      overflow: hidden; /* ensures the big 404 never scrolls */
+    }
+
+    /* Full-page spanning 404 */
+    .bg-404{
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+
+    .bg-404 span{
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      line-height: 1;
+      /* Blue-grey at 50% opacity */
+      color: rgba(150, 170, 185, 0.5);
+      /* Responsive “full page spanning” scale */
+      font-size: clamp(9rem, 28vw, 22rem);
+      transform: translateY(0.02em);
+      white-space: nowrap;
+    }
+
+    main{
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 720px;
+      padding: 2rem 1.5rem;
+    }
+
+    hr{
+      border: 0;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.35);
+      margin: 1.5rem 0;
+    }
+
+    /* --- Typography --- */
+    h1{
+      font-size: 3rem; /* ~48px */
+      font-weight: 900; /* Arial Black equivalent */
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+
+    h2{
+      font-size: 1.5rem; /* ~24px */
+      font-weight: 300; /* narrow / light feel */
+      margin: 0.5rem 0;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    h3{
+      font-size: 1.5rem; /* ~24px */
+      font-weight: 900; /* Arial Black equivalent */
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .election-date{
+      margin: 0.75rem 0 0;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .not-found{
+      margin: 1.25rem 0 0;
+      font-size: 1.05rem;
+      opacity: 0.92;
+    }
+
+    .home-link{
+      display: inline-block;
+      margin-top: 1.1rem;
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(255,255,255,0.45);
+      padding-bottom: 0.15rem;
+    }
+    .home-link:hover{
+      border-bottom-color: rgba(255,255,255,0.85);
+    }
+    .home-link:focus-visible{
+      outline: 2px solid rgba(255,255,255,0.95);
+      outline-offset: 4px;
+      border-bottom-color: rgba(255,255,255,0.85);
+    }
+
+    /* --- Responsive scaling --- */
+    @media (max-width: 480px){
+      h1{ font-size: 2.25rem; }
+      h2, h3{ font-size: 1.25rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-404" aria-hidden="true">
+    <span>404</span>
+  </div>
+
+  <main role="main" aria-label="Page not found">
+    <hr />
+    <h1>Aaron Marcoux</h1>
+    <h2>for</h2>
+    <h3>Washburn County Circuit Court Judge</h3>
+    <hr />
+    <p class="election-date">Election Day • April 7, 2026</p>
+
+    <p class="not-found">
+      This page could not be found.
+    </p>
+
+    <a class="home-link" href="/">Return Home</a>
+  </main>
+</body>
+</html>
