@@ -9,16 +9,14 @@
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="theme-color" content="#041122" />
+  <meta name="author" content="Marcoux for Judge 2026" />
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://marcoux2026.com/" />
 
-  <!-- Favicons (place favicon.ico + favicon.png at site root) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Marcoux for Judge 2026" />
   <meta property="og:locale" content="en_US" />
@@ -32,19 +30,16 @@
   <meta property="og:image:height" content="600" />
   <meta property="og:image:alt" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
   <meta name="twitter:description" content="Focused on fairness, efficiency, and respect. Election Day: April 7, 2026. Washburn County, WI." />
   <meta name="twitter:image" content="https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg" />
   <meta name="twitter:image:alt" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
 
-  <!-- Hosted fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -75,6 +70,15 @@
           "https://www.facebook.com/MarcouxForJudge/",
           "https://www.instagram.com/marcouxforjudge/"
         ]
+      },
+      {
+        "@type":"Event",
+        "@id":"https://marcoux2026.com/#election-day-2026",
+        "name":"Washburn County Circuit Court Judge Election",
+        "startDate":"2026-04-07",
+        "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus":"https://schema.org/EventScheduled",
+        "url":"https://marcoux2026.com/"
       }
     ]
   }
@@ -89,6 +93,7 @@
     gtag('config', 'G-LCPW3QVEV3');
   </script>
 
+  <!-- ===== CRITICAL CSS (above the fold) ===== -->
   <style>
     :root{
       --navy:#071a33;
@@ -98,7 +103,7 @@
       --hair:rgba(10,23,48,.18);
 
       --white-ink:rgba(255,255,255,.93);
-      --white-muted:rgba(255,255,255,.74);
+      --white-muted:rgba(255,255,255,.80);
 
       --accent:#b21f2d;
       --cta-blue:#0b2a55;
@@ -107,6 +112,8 @@
       --max:1100px;
       --display:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
       --body:"Manrope", var(--display);
+
+      --space-lg: 1.25rem;
     }
 
     *{ box-sizing:border-box; }
@@ -125,25 +132,12 @@
     a:hover{ text-decoration-thickness:2px; }
     :focus-visible{ outline:2px solid currentColor; outline-offset:3px; }
 
-    /* Layout */
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 0 1.25rem;
+      padding: 0 var(--space-lg);
     }
 
-    section{ scroll-margin-top: 92px; }
-    .section{ padding: clamp(3.9rem, 7.5vw, 6.75rem) 0; }
-
-    .dark{
-      background:
-        radial-gradient(1200px 650px at 50% 18%, rgba(255,255,255,.09), transparent 62%),
-        linear-gradient(180deg, var(--navy), var(--navy2));
-      color: var(--white-ink);
-    }
-    .light{ background:#fff; color: var(--ink); }
-
-    /* Header / Nav */
     .skip-link{
       position:absolute; left:.75rem; top:.75rem; z-index: 50;
       padding:.5rem .75rem;
@@ -187,38 +181,21 @@
     }
     .links a{
       text-decoration:none;
-      color: rgba(255,255,255,.78);
-      font-weight: 600;
+      color: rgba(255,255,255,.82);
+      font-weight: 700;
       font-size: .98rem;
     }
-    .links a:hover{ color: rgba(255,255,255,.95); }
+    .links a:hover{ color: rgba(255,255,255,.97); }
 
-    /* Global typography */
-    h1,h2{ font-family: var(--display); margin:0; }
-    p,li,label,input,textarea{ font-family: var(--body); }
+    section{ scroll-margin-top: 92px; }
 
-    h2{
-      margin:0 0 .85rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      font-size: clamp(1.9rem, 1.6vw + 1.15rem, 2.6rem);
-      line-height: 1.05;
-    }
-    p{
-      margin:0;
-      max-width: 78ch;
-      font-size: clamp(1.05rem, .35vw + 1rem, 1.18rem);
-    }
-    p + p{ margin-top: .95rem; }
-
-    .section-lede{
-      margin-top: .35rem;
-      max-width: 78ch;
-      font-size: clamp(1.05rem, .35vw + 1rem, 1.18rem);
-      opacity: .9;
+    .dark{
+      background:
+        radial-gradient(1200px 650px at 50% 18%, rgba(255,255,255,.09), transparent 62%),
+        linear-gradient(180deg, var(--navy), var(--navy2));
+      color: var(--white-ink);
     }
 
-    /* HERO — alignment lock */
     .hero{
       text-align:center;
       padding-top: clamp(5rem, 9vw, 7.5rem);
@@ -241,7 +218,9 @@
       line-height: 1;
     }
     h1{
-      font-weight: 900;
+      margin:0;
+      font-family: var(--display);
+      font-weight: 800;
       letter-spacing: -0.045em;
       line-height: 0.95;
       font-size: clamp(3.8rem, 7.8vw, 6.2rem);
@@ -256,11 +235,10 @@
     }
     .subhead strong{
       font-family: var(--display);
-      font-weight: 900;
+      font-weight: 800;
       color: var(--white-ink);
       letter-spacing: -0.01em;
     }
-
     .actions{
       margin-top: 2rem;
       display:flex;
@@ -296,16 +274,15 @@
     }
     .btn.ghost:hover{ background: rgba(255,255,255,.06); }
 
-    /* Election callout */
     .election-wrap{ margin: 2rem auto 0; display:flex; justify-content:center; }
-    .election{
+    aside.election{
       display:inline-block;
       padding: .95rem 1.1rem;
       border-radius: 0;
       background: var(--accent);
       color: #fff;
       font-family: var(--display);
-      font-weight: 900;
+      font-weight: 800;
       letter-spacing: .08em;
       text-transform: uppercase;
       box-shadow: 0 16px 44px rgba(0,0,0,.38);
@@ -318,7 +295,296 @@
       font-weight: 600;
     }
 
-    /* ABOUT */
+    .menu-toggle{ display:none; }
+    @media (max-width: 720px){
+      nav{ align-items:flex-start; }
+      .menu-toggle{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        gap:.5rem;
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.18);
+        color: var(--white-ink);
+        border-radius: 999px;
+        padding: .55rem .85rem;
+        font-family: var(--display);
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .links{
+        display:none;
+        width: 100%;
+        padding-top: .65rem;
+      }
+      nav[data-open="true"] .links{ display:flex; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header role="banner">
+    <div class="wrap">
+      <nav aria-label="Primary" id="site-nav" data-open="false">
+        <a class="brand" href="#top">Marcoux for Judge 2026</a>
+
+        <button class="menu-toggle" type="button" aria-controls="primary-links" aria-expanded="false">
+          Menu
+        </button>
+
+        <ul class="links" id="primary-links" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#approach">Approach on the Bench</a></li>
+          <li><a href="#yard-signs">Yard Signs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section id="top" class="dark hero" aria-label="Campaign intro">
+      <div class="wrap">
+        <p class="kicker">Candidate for Washburn County Circuit Court Judge</p>
+        <h1>Aaron Marcoux</h1>
+
+        <p class="subhead">
+          <strong>Focused on fairness, efficiency, and respect.</strong><br />
+          Understanding the responsibility of the role.
+        </p>
+
+        <div class="actions" aria-label="Primary actions">
+          <a class="btn primary" href="#yard-signs">Request a Yard Sign</a>
+          <a class="btn ghost"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarcoux2026.com%2F"
+             target="_blank" rel="noopener noreferrer">
+            Share on Facebook
+          </a>
+        </div>
+
+        <div class="election-wrap" aria-label="Election Day">
+          <aside class="election" aria-label="Election Day notice">Election Day • April 7, 2026</aside>
+        </div>
+
+        <p class="locale">Washburn County, WI</p>
+      </div>
+    </section>
+
+    <section id="about" class="section light" aria-label="About Aaron Marcoux">
+      <div class="wrap about">
+        <div class="about__text">
+          <h2>About Aaron</h2>
+
+          <p>
+            Aaron Marcoux is the Washburn County District Attorney, a role he has held since 2019 and won by election in 2020 and 2024.
+          </p>
+          <p>
+            He brings experience across the justice system, beginning his legal career with the Wisconsin State Public Defender’s Office in Ashland,
+            serving Northern Wisconsin communities from 2010–2015.
+          </p>
+          <p>
+            He later served as an Assistant District Attorney in Sawyer County (2015–2019) before returning to serve Washburn County.
+          </p>
+          <p>
+            A Rice Lake High School graduate, Aaron earned degrees from UW–Eau Claire Barron County and UW–Milwaukee, and graduated from the
+            University of Wyoming College of Law.
+          </p>
+          <p>
+            In 2024, he was named UW–Eau Claire Barron County’s Distinguished Alumnus.
+          </p>
+          <p>
+            Aaron lives in Washburn County with his wife, Elizabeth, and their six children and coaches school athletics locally.
+          </p>
+        </div>
+
+        <figure class="about__media">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/Aaron-Marcoux.webp"
+              sizes="(max-width: 980px) 100vw, 40vw"
+            />
+            <source
+              type="image/jpeg"
+              srcset="/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
+              sizes="(max-width: 980px) 100vw, 40vw"
+            />
+            <img
+              src="/Aaron-Marcoux.webp"
+              alt="Aaron Marcoux, candidate for Washburn County Circuit Court Judge."
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <section id="approach" class="section dark approach" aria-label="Approach on the Bench">
+      <div class="wrap">
+        <h2>Approach on the Bench</h2>
+
+        <p class="tagline">Fairness. Efficiency. Respect.</p>
+
+        <ul role="list">
+          <li><strong>Prepared and even-tempered</strong> in the courtroom</li>
+          <li><strong>Impartial application of the law</strong>, guided by the facts and the record</li>
+          <li><strong>Efficient case management</strong> that supports timely court proceedings</li>
+          <li><strong>Respect</strong> for every person who comes before the court</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- YARD SIGNS -->
+    <section id="yard-signs" class="section light" aria-label="Yard sign requests">
+      <div class="wrap">
+        <h2>Request a Yard Sign</h2>
+        <p class="section-lede">
+          Interested in displaying a yard sign?<br />
+          If you’re willing to display a yard sign, please let us know and a campaign volunteer will follow up.
+        </p>
+
+        <!-- Native browser validation restored (no novalidate).
+             All fields required. "Number of signs" removed. -->
+        <form id="form-yard-signs" action="https://formspree.io/f/xqearygr" method="post">
+          <div class="grid">
+            <div class="row">
+              <label for="ys-name">Name</label>
+              <input id="ys-name" name="name" type="text" autocomplete="name" required aria-required="true" />
+            </div>
+
+            <div class="row">
+              <label for="ys-email">Email</label>
+              <input id="ys-email" name="email" type="email" autocomplete="email" required aria-required="true" />
+            </div>
+
+            <div class="row">
+              <label for="ys-phone">Phone number</label>
+              <input id="ys-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" />
+            </div>
+
+            <div class="row full">
+              <label for="ys-address">Address</label>
+              <input id="ys-address" name="address" type="text" autocomplete="street-address" required aria-required="true" />
+            </div>
+          </div>
+
+          <input type="hidden" name="_subject" value="Yard Sign Request — Marcoux for Judge" />
+
+          <button class="btn primary" type="submit">Submit Request</button>
+
+          <p class="fineprint">By submitting, you consent to be contacted about your request.</p>
+          <p class="fineprint privacy-ref">
+            Privacy note: Please see <a href="#privacy">data use</a> below.
+          </p>
+          <div class="sr-status" aria-live="polite" aria-atomic="true"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section dark" aria-label="Contact the campaign">
+      <div class="wrap">
+        <h2>Contact the Campaign</h2>
+        <p class="section-lede">Share a question or message and we will respond as we’re able.</p>
+
+        <p id="contact-legal-disclaimer" class="fineprint">
+          Due to the judicial campaign context, we cannot respond to legal advice requests.
+        </p>
+
+        <!-- Native browser validation restored (no novalidate). All fields required. -->
+        <form id="form-contact" action="https://formspree.io/f/xzdznjyz" method="post">
+          <div class="grid">
+            <div class="row">
+              <label for="c-name">Name</label>
+              <input id="c-name" name="name" type="text" autocomplete="name" required aria-required="true" />
+            </div>
+
+            <div class="row">
+              <label for="c-email">Email</label>
+              <input id="c-email" name="email" type="email" autocomplete="email" required aria-required="true" />
+            </div>
+
+            <div class="row full">
+              <label for="c-phone">Phone number</label>
+              <input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" />
+            </div>
+
+            <div class="row full">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" rows="5" aria-describedby="contact-legal-disclaimer" required aria-required="true"></textarea>
+            </div>
+          </div>
+
+          <input type="hidden" name="_subject" value="Campaign Contact — Marcoux for Judge" />
+
+          <button class="btn primary" type="submit">Send Message</button>
+
+          <p class="fineprint privacy-ref">
+            Privacy note: Please see <a href="#privacy">data use</a> below.
+          </p>
+          <div class="sr-status" aria-live="polite" aria-atomic="true"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap footer-grid">
+      <div>
+        <p>
+          Paid for by Aaron Marcoux (self-financed). Aaron Marcoux, Treasurer.<br />
+          Washburn County, WI • <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
+        </p>
+
+        <p id="privacy" class="fineprint">
+          <strong>Privacy &amp; data use:</strong> Information submitted through this website is used only to respond to your request or message and related campaign communications. We do not sell your information.
+        </p>
+
+        <p>© 2026 Aaron Marcoux</p>
+      </div>
+
+      <div>
+        <p class="footer-title">Connect</p>
+        <div class="footer-actions" aria-label="Social links">
+          <a class="footer-btn" href="https://www.facebook.com/MarcouxForJudge/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="footer-btn" href="https://www.instagram.com/marcouxforjudge/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== NON-CRITICAL CSS (moved out of head) ===== -->
+  <style>
+    .section{ padding: clamp(3.9rem, 7.5vw, 6.75rem) 0; }
+    .light{ background:#fff; color: var(--ink); }
+
+    h2{
+      font-family: var(--display);
+      margin:0 0 .85rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: clamp(1.9rem, 1.6vw + 1.15rem, 2.6rem);
+      line-height: 1.05;
+    }
+    p{
+      margin:0;
+      max-width: 78ch;
+      font-size: clamp(1.05rem, .35vw + 1rem, 1.18rem);
+    }
+    p + p{ margin-top: .95rem; }
+
+    .section-lede{
+      margin-top: .35rem;
+      max-width: 78ch;
+      font-size: clamp(1.05rem, .35vw + 1rem, 1.18rem);
+      opacity: .9;
+    }
+
     .about{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
@@ -340,14 +606,13 @@
       border: 1px solid rgba(10,23,48,.10);
     }
 
-    /* APPROACH */
     .approach p{
       font-size: clamp(1.12rem, .45vw + 1.05rem, 1.28rem);
     }
     .approach .tagline{
       margin:0;
       font-family: var(--display);
-      font-weight: 900;
+      font-weight: 800;
       letter-spacing: -0.02em;
       color: var(--white-ink);
     }
@@ -360,11 +625,10 @@
     .approach li{ margin: .85rem 0; }
     .approach li strong{
       font-family: var(--display);
-      font-weight: 900;
+      font-weight: 800;
       letter-spacing: -0.01em;
     }
 
-    /* Forms */
     form{ margin-top: 1.35rem; max-width: 860px; }
     .grid{
       display:grid;
@@ -397,14 +661,10 @@
     }
     textarea{ resize: vertical; }
 
-    form .btn.primary{
-      padding: 0.95rem 1.35rem;
-      font-size: 1rem;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-    }
+    input:focus, textarea:focus{ outline:2px solid rgba(178,31,45,.65); outline-offset: 2px; }
+    input:invalid, textarea:invalid{ border-color: rgba(178,31,45,.70); }
+    input:invalid:focus, textarea:invalid:focus{ outline-color: rgba(178,31,45,.85); }
 
-    /* Light section primary button: blue */
     .light .btn.primary{
       background: var(--cta-blue);
       color: #ffffff;
@@ -415,23 +675,26 @@
       filter: none;
     }
 
-    /* Fine print (readable on both backgrounds) */
-    .fine-print,
     .fineprint{
       margin-top: 1rem;
       font-size: 1rem;
     }
-    .light .fine-print,
     .light .fineprint{ color: rgba(10,23,48,.72); }
-    .dark .fine-print,
     .dark .fineprint{ color: var(--white-muted); }
+    .privacy-ref{ margin-top: .65rem; font-size: .98rem; }
 
-    .privacy-ref{
-      margin-top: .65rem;
+    form[data-submitting="true"] button[type="submit"]{
+      opacity: .75;
+      pointer-events: none;
+      filter: grayscale(.2);
+    }
+    .sr-status{
+      margin-top: .75rem;
       font-size: .98rem;
     }
+    .light .sr-status{ color: rgba(10,23,48,.72); }
+    .dark .sr-status{ color: var(--white-muted); }
 
-    /* Footer */
     footer{
       background:#fff;
       color: var(--ink);
@@ -451,7 +714,7 @@
     }
     .footer-title{
       font-family: var(--display);
-      font-weight: 900;
+      font-weight: 800;
       letter-spacing: -0.01em;
       margin: 0 0 .6rem;
       font-size: 1.1rem;
@@ -481,7 +744,6 @@
     .footer-btn:hover{ background: rgba(10,23,48,.05); }
     .footer-btn:active{ transform: translateY(1px); }
 
-    /* Responsive */
     @media (max-width: 980px){
       .about{ grid-template-columns: 1fr; }
       .about__media picture,
@@ -494,240 +756,86 @@
     @media (max-width: 720px){
       .grid{ grid-template-columns: 1fr; }
       h1{ font-size: clamp(3.3rem, 11vw, 4.9rem); }
-      .election{ letter-spacing: .06em; }
-      nav{ align-items:flex-start; }
+      aside.election{ letter-spacing: .06em; }
     }
   </style>
-</head>
 
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <script>
+    (function () {
+      // Mobile menu toggle
+      var nav = document.getElementById("site-nav");
+      var btn = nav && nav.querySelector(".menu-toggle");
+      if (nav && btn) {
+        btn.addEventListener("click", function () {
+          var isOpen = nav.getAttribute("data-open") === "true";
+          nav.setAttribute("data-open", String(!isOpen));
+          btn.setAttribute("aria-expanded", String(!isOpen));
+        });
+      }
 
-  <header role="banner">
-    <div class="wrap">
-      <nav aria-label="Primary">
-        <a class="brand" href="#top">Marcoux for Judge 2026</a>
+      // GA helpers
+      function sendEvent(name, params) {
+        if (typeof window.gtag !== "function") return;
+        window.gtag("event", name, Object.assign({ transport_type: "beacon" }, params || {}));
+      }
 
-        <ul class="links" role="list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#approach">Approach on the Bench</a></li>
-          <li><a href="#yard-signs">Yard Signs</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      function linkText(a) {
+        return (a.getAttribute("aria-label") || a.textContent || "").trim().replace(/\s+/g, " ").slice(0, 120);
+      }
 
-  <main id="main" role="main">
-    <!-- HERO -->
-    <section id="top" class="dark hero" aria-label="Campaign intro">
-      <div class="wrap">
-        <p class="kicker">Candidate for Washburn County Circuit Court Judge</p>
-        <h1>Aaron Marcoux</h1>
+      // Track ALL link clicks
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest("a");
+        if (!a) return;
 
-        <p class="subhead">
-          <strong>Focused on fairness, efficiency, and respect.</strong><br />
-          Understanding the responsibility of the role.
-        </p>
+        var href = a.getAttribute("href");
+        if (!href || href === "#" || href.startsWith("javascript:")) return;
 
-        <div class="actions" aria-label="Primary actions">
-          <a class="btn primary" href="#yard-signs">Request a Yard Sign</a>
-          <a class="btn ghost"
-             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarcoux2026.com%2F"
-             target="_blank" rel="noopener noreferrer">
-            Share on Facebook
-          </a>
-        </div>
+        var isExternal = false;
+        var url = href;
 
-        <div class="election-wrap" aria-label="Election Day">
-          <div class="election" role="note">Election Day • April 7, 2026</div>
-        </div>
+        try {
+          var u = new URL(href, location.href);
+          url = u.href;
+          isExternal = (u.origin !== location.origin);
+        } catch (_) {}
 
-        <p class="locale">Washburn County, WI</p>
-      </div>
-    </section>
+        sendEvent("link_click", {
+          link_url: url,
+          link_text: linkText(a) || "(no text)",
+          link_type: href.startsWith("#") ? "hash" : (href.startsWith("mailto:") ? "mailto" : (href.startsWith("tel:") ? "tel" : (isExternal ? "external" : "internal"))),
+          link_target: a.getAttribute("target") || "(none)"
+        });
+      }, true);
 
-    <!-- ABOUT -->
-    <section id="about" class="section light" aria-label="About Aaron Marcoux">
-      <div class="wrap about">
-        <div class="about__text">
-          <h2>About Aaron</h2>
+      // Track form submissions (native validation preserved)
+      function hookForm(id, formName) {
+        var form = document.getElementById(id);
+        if (!form) return;
 
-          <p>
-            Aaron Marcoux is the Washburn County District Attorney, a role he has held since 2019 and won by election in 2020 and 2024.
-          </p>
-          <p>
-            He brings experience across the justice system, beginning his legal career with the Wisconsin State Public Defender’s Office in Ashland,
-            serving Northern Wisconsin communities from 2010–2015.
-          </p>
-          <p>
-            He later served as an Assistant District Attorney in Sawyer County (2015–2019) before returning to serve Washburn County.
-          </p>
-          <p>
-            A Rice Lake High School graduate, Aaron earned degrees from UW–Eau Claire Barron County and UW–Milwaukee, and graduated from the
-            University of Wyoming College of Law.
-          </p>
-          <p>
-            In 2024, he was named UW–Eau Claire Barron County’s Distinguished Alumnus.
-          </p>
-          <p>
-            Aaron lives in Washburn County with his wife, Elizabeth, and their six children and coaches school athletics locally.
-          </p>
-        </div>
+        form.addEventListener("submit", function (e) {
+          if (form.dataset.submitting === "true") {
+            e.preventDefault();
+            return;
+          }
+          form.dataset.submitting = "true";
+          form.setAttribute("data-submitting", "true");
 
-        <figure class="about__media">
-          <!-- WebP-first with JPEG fallback for broader compatibility -->
-          <picture>
-            <source
-              type="image/webp"
-              srcset="/Aaron-Marcoux.webp 1x, /Aaron-Marcoux.webp 2x"
-              sizes="(max-width: 980px) 100vw, 40vw"
-            />
-            <source
-              type="image/jpeg"
-              srcset="/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg 1x, /aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg 2x"
-              sizes="(max-width: 980px) 100vw, 40vw"
-            />
-            <img
-              src="/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
-              alt="Aaron Marcoux, candidate for Washburn County Circuit Court Judge."
-              width="800"
-              height="600"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-      </div>
-    </section>
+          var status = form.querySelector(".sr-status");
+          if (status) status.textContent = "Submitting...";
 
-    <!-- APPROACH -->
-    <section id="approach" class="section dark approach" aria-label="Approach on the Bench">
-      <div class="wrap">
-        <h2>Approach on the Bench</h2>
+          sendEvent("form_submit", {
+            form_name: formName,
+            form_action: form.getAttribute("action") || "",
+            form_method: (form.getAttribute("method") || "GET").toUpperCase()
+          });
+          // No preventDefault: let the browser submit normally (and keep validation intact).
+        }, true);
+      }
 
-        <p class="tagline">Experience. Fairness. Respect.</p>
-
-        <ul role="list">
-          <li><strong>Prepared and even-tempered</strong> in the courtroom</li>
-          <li><strong>Impartial application of the law</strong>, guided by the facts and the record</li>
-          <li><strong>Efficient case management</strong> that supports timely court proceedings</li>
-          <li><strong>Respect</strong> for every person who comes before the court</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- YARD SIGNS -->
-    <section id="yard-signs" class="section light" aria-label="Yard sign requests">
-      <div class="wrap">
-        <h2>Request a Yard Sign</h2>
-        <p class="section-lede">
-          Interested in displaying a yard sign?<br />
-          If you’re willing to display a yard sign, please let us know and a campaign volunteer will follow up.
-        </p>
-
-        <form action="https://formspree.io/f/xqearygr" method="post">
-          <div class="grid">
-            <div class="row">
-              <label for="ys-name">Name</label>
-              <input id="ys-name" name="name" type="text" autocomplete="name" required />
-            </div>
-
-            <div class="row">
-              <label for="ys-email">Email</label>
-              <input id="ys-email" name="email" type="email" autocomplete="email" required />
-            </div>
-
-            <div class="row">
-              <label for="ys-phone">Phone number</label>
-              <input id="ys-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
-            </div>
-
-            <div class="row full">
-              <label for="ys-address">Address</label>
-              <input id="ys-address" name="address" type="text" autocomplete="street-address" required />
-            </div>
-
-           <input type="hidden" name="_subject" value="Yard Sign Request — Marcoux 2026" />
-
-          <button class="btn primary" type="submit">Submit Request</button>
-
-          <p class="fineprint">By submitting, you consent to be contacted about your request.</p>
-          <p class="fineprint privacy-ref">
-            Privacy note: Please see <a href="#privacy">data use</a> below.
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section dark" aria-label="Contact the campaign">
-      <div class="wrap">
-        <h2>Contact the Campaign</h2>
-        <p class="section-lede">Share a question or message and we will respond as we’re able.</p>
-
-        <p id="contact-legal-disclaimer" class="fine-print">
-          Due to the judicial campaign context, we cannot respond to legal advice requests.
-        </p>
-
-        <form action="https://formspree.io/f/xzdznjyz" method="post">
-          <div class="grid">
-            <div class="row">
-              <label for="c-name">Name</label>
-              <input id="c-name" name="name" type="text" autocomplete="name" required />
-            </div>
-
-            <div class="row">
-              <label for="c-email">Email</label>
-              <input id="c-email" name="email" type="email" autocomplete="email" required />
-            </div>
-
-            <div class="row full">
-              <label for="c-phone">Phone number</label>
-              <input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
-            </div>
-
-            <div class="row full">
-              <label for="c-message">Message</label>
-              <textarea id="c-message" name="message" rows="5" aria-describedby="contact-legal-disclaimer" required></textarea>
-            </div>
-          </div>
-
-          <input type="hidden" name="_subject" value="Campaign Contact — Marcoux 2026" />
-
-          <button class="btn primary" type="submit">Send Message</button>
-
-          <p class="fineprint privacy-ref">
-            Privacy note: Please see <a href="#privacy">data use</a> below.
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="wrap footer-grid">
-      <div>
-        <p>
-          Paid for by Aaron Marcoux (self-financed). Aaron Marcoux, Treasurer.<br />
-          Washburn County, WI • <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
-        </p>
-
-        <p id="privacy" class="fine-print">
-          <strong>Privacy &amp; data use:</strong> Information submitted through this website is used only to respond to your request or message and related campaign communications. We do not sell your information.
-        </p>
-
-        <p>© 2026 Aaron Marcoux</p>
-      </div>
-
-      <div>
-        <p class="footer-title">Connect</p>
-        <div class="footer-actions" aria-label="Social links">
-          <a class="footer-btn" href="https://www.facebook.com/MarcouxForJudge/" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a class="footer-btn" href="https://www.instagram.com/marcouxforjudge/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+      hookForm("form-yard-signs", "yard_sign_request");
+      hookForm("form-contact", "campaign_contact");
+    })();
+  </script>
 </body>
 </html>
