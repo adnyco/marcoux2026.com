@@ -5,23 +5,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Aaron Marcoux — Bio & Experience | Marcoux 2026</title>
+  <title>Aaron Marcoux — Bio & Experience | Marcoux for Judge 2026</title>
   <meta name="description" content="A deeper look at Aaron Marcoux’s public service and legal experience in Wisconsin’s courts — public defender, prosecutor, and Washburn County District Attorney. Election Day: April 7, 2026." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="theme-color" content="#041122" />
+  <meta name="author" content="Marcoux for Judge 2026" />
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://marcoux2026.com/Aaron-marcoux-bio.html" />
 
-  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Marcoux 2026" />
+  <meta property="og:site_name" content="Marcoux for Judge 2026" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Aaron Marcoux — Bio & Experience" />
   <meta property="og:description" content="A deeper look at Aaron Marcoux’s public service and legal experience in Wisconsin’s courts — public defender, prosecutor, and Washburn County District Attorney." />
@@ -33,19 +31,17 @@
   <meta property="og:image:height" content="600" />
   <meta property="og:image:alt" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Aaron Marcoux — Bio & Experience" />
-  <meta name="twitter:description" content="A deeper look at Aaron Marcoux’s public service and legal experience in Wisconsin’s courts — public defender, prosecutor, and Washburn County District Attorney." />
+  <meta name="twitter:description" content="A deeper look at Aaron Marcoux’s public service and legal experience in Wisconsin’s courts." />
   <meta name="twitter:image" content="https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg" />
   <meta name="twitter:image:alt" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
 
-  <!-- Hosted fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Match index.html font families + weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -53,14 +49,14 @@
       {
         "@type":"WebSite",
         "@id":"https://marcoux2026.com/#website",
-        "name":"Marcoux 2026",
+        "name":"Marcoux for Judge 2026",
         "url":"https://marcoux2026.com/"
       },
       {
         "@type":"WebPage",
         "@id":"https://marcoux2026.com/Aaron-marcoux-bio.html#webpage",
-        "url":"https://marcoux2026.com/Aaron-marcoux-bio.html",
         "name":"Aaron Marcoux — Bio & Experience",
+        "url":"https://marcoux2026.com/Aaron-marcoux-bio.html",
         "isPartOf":{"@id":"https://marcoux2026.com/#website"}
       },
       {
@@ -76,13 +72,22 @@
         },
         "email":"mailto:marcoux2026@gmail.com",
         "image":[
-          "https://marcoux2026.com/Aaron-Marcoux.webp",
+          "https://marcoux2026.com/aaron-Marcoux.webp",
           "https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
         ],
         "sameAs":[
           "https://www.facebook.com/MarcouxForJudge/",
           "https://www.instagram.com/marcouxforjudge/"
         ]
+      },
+      {
+        "@type":"Event",
+        "@id":"https://marcoux2026.com/#election-day-2026",
+        "name":"Washburn County Circuit Court Judge Election",
+        "startDate":"2026-04-07",
+        "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus":"https://schema.org/EventScheduled",
+        "url":"https://marcoux2026.com/"
       }
     ]
   }
@@ -97,6 +102,7 @@
     gtag('config', 'G-LCPW3QVEV3');
   </script>
 
+  <!-- ===== CRITICAL CSS (match index.html structure) ===== -->
   <style>
     :root{
       --navy:#071a33;
@@ -106,7 +112,7 @@
       --hair:rgba(10,23,48,.18);
 
       --white-ink:rgba(255,255,255,.93);
-      --white-muted:rgba(255,255,255,.74);
+      --white-muted:rgba(255,255,255,.80);
 
       --accent:#b21f2d;
       --cta-blue:#0b2a55;
@@ -115,6 +121,8 @@
       --max:1100px;
       --display:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
       --body:"Manrope", var(--display);
+
+      --space-lg: 1.25rem;
     }
 
     *{ box-sizing:border-box; }
@@ -133,25 +141,12 @@
     a:hover{ text-decoration-thickness:2px; }
     :focus-visible{ outline:2px solid currentColor; outline-offset:3px; }
 
-    /* Layout */
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 0 1.25rem;
+      padding: 0 var(--space-lg);
     }
 
-    section{ scroll-margin-top: 92px; }
-    .section{ padding: clamp(3.9rem, 7.5vw, 6.75rem) 0; }
-
-    .dark{
-      background:
-        radial-gradient(1200px 650px at 50% 18%, rgba(255,255,255,.09), transparent 62%),
-        linear-gradient(180deg, var(--navy), var(--navy2));
-      color: var(--white-ink);
-    }
-    .light{ background:#fff; color: var(--ink); }
-
-    /* Header / Nav */
     .skip-link{
       position:absolute; left:.75rem; top:.75rem; z-index: 50;
       padding:.5rem .75rem;
@@ -196,78 +191,28 @@
     }
     .links a{
       text-decoration:none;
-      color: rgba(255,255,255,.78);
-      font-weight: 600;
+      color: rgba(255,255,255,.82);
+      font-weight: 700;
       font-size: .98rem;
     }
-    .links a:hover{ color: rgba(255,255,255,.95); }
+    .links a:hover{ color: rgba(255,255,255,.97); }
 
-    /* Mobile menu toggle */
-    .menu-toggle{ display:none; }
-    @media (max-width: 720px){
-      nav{ align-items:flex-start; }
-      .menu-toggle{
-        display:inline-flex;
-        align-items:center;
-        justify-content:center;
-        gap:.5rem;
-        background: rgba(255,255,255,.06);
-        border: 1px solid rgba(255,255,255,.18);
-        color: var(--white-ink);
-        border-radius: 999px;
-        padding: .55rem .85rem;
-        font-family: var(--display);
-        font-weight: 800;
-        cursor: pointer;
-      }
-      .links{
-        display:none;
-        width: 100%;
-        padding-top: .65rem;
-      }
-      nav[data-open="true"] .links{ display:flex; }
+    section{ scroll-margin-top: 92px; }
+
+    .dark{
+      background:
+        radial-gradient(1200px 650px at 50% 18%, rgba(255,255,255,.09), transparent 62%),
+        linear-gradient(180deg, var(--navy), var(--navy2));
+      color: var(--white-ink);
     }
 
-    /* Global typography */
-    h1,h2,h3{ font-family: var(--display); margin:0; }
-    p,li{ font-family: var(--body); }
-
-    h2{
-      margin:0 0 .85rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      font-size: clamp(1.9rem, 1.6vw + 1.15rem, 2.6rem);
-      line-height: 1.05;
-    }
-    h3{
-      margin: 0 0 .5rem;
-      font-weight: 900;
-      letter-spacing: -0.01em;
-      font-size: clamp(1.25rem, .8vw + 1.05rem, 1.55rem);
-      line-height: 1.15;
-    }
-    p{
-      margin:0;
-      max-width: 78ch;
-      font-size: clamp(1.05rem, .35vw + 1rem, 1.18rem);
-    }
-    p + p{ margin-top: .95rem; }
-
-    .section-lede{
-      margin-top: .35rem;
-      max-width: 78ch;
-      font-size: clamp(1.05rem, .35vw + 1rem, 1.18rem);
-      opacity: .9;
-    }
-
-    /* HERO (bio page) */
     .hero{
       text-align:center;
       padding-top: clamp(5rem, 9vw, 7.5rem);
-      padding-bottom: clamp(3.75rem, 7vw, 5.75rem);
+      padding-bottom: clamp(4.5rem, 8vw, 6.8rem);
     }
     .hero .wrap{
-      max-width: 980px;
+      max-width: 920px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -283,33 +228,27 @@
       line-height: 1;
     }
     h1{
-      font-weight: 900;
+      margin:0;
+      font-family: var(--display);
+      font-weight: 800;
       letter-spacing: -0.045em;
-      line-height: 0.98;
-      font-size: clamp(3.1rem, 6.6vw, 5.2rem);
+      line-height: 0.95;
+      font-size: clamp(3.3rem, 7vw, 5.6rem);
     }
     .subhead{
-      margin: 1.15rem 0 0;
-      max-width: 72ch;
+      margin: 1.25rem 0 0;
+      max-width: 70ch;
       color: var(--white-muted);
-      font-size: clamp(1.1rem, 1vw + .95rem, 1.3rem);
+      font-size: clamp(1.1rem, 1vw + .95rem, 1.28rem);
       font-weight: 600;
-      line-height: 1.5;
+      line-height: 1.45;
     }
     .subhead strong{
       font-family: var(--display);
-      font-weight: 900;
+      font-weight: 800;
       color: var(--white-ink);
       letter-spacing: -0.01em;
     }
-    .tagline{
-      margin: 1.35rem 0 0;
-      font-family: var(--display);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      color: var(--white-ink);
-    }
-
     .actions{
       margin-top: 2rem;
       display:flex;
@@ -345,15 +284,388 @@
     }
     .btn.ghost:hover{ background: rgba(255,255,255,.06); }
 
-    /* Content layout */
-    .bio-grid{
+    .election-wrap{ margin: 2rem auto 0; display:flex; justify-content:center; }
+    aside.election{
+      display:inline-block;
+      padding: .95rem 1.1rem;
+      border-radius: 0;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--display);
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      box-shadow: 0 16px 44px rgba(0,0,0,.38);
+      line-height: 1;
+    }
+
+    .menu-toggle{ display:none; }
+    @media (max-width: 720px){
+      nav{ align-items:flex-start; }
+      .menu-toggle{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        gap:.5rem;
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.18);
+        color: var(--white-ink);
+        border-radius: 999px;
+        padding: .55rem .85rem;
+        font-family: var(--display);
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .links{
+        display:none;
+        width: 100%;
+        padding-top: .65rem;
+      }
+      nav[data-open="true"] .links{ display:flex; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header role="banner">
+    <div class="wrap">
+      <nav aria-label="Primary" id="site-nav" data-open="false">
+        <a class="brand" href="/">Marcoux for Judge 2026</a>
+
+        <button class="menu-toggle" type="button" aria-controls="primary-links" aria-expanded="false">
+          Menu
+        </button>
+
+        <ul class="links" id="primary-links" role="list">
+          <li><a href="/#about">About</a></li>
+          <li><a href="/Aaron-marcoux-bio.html" aria-current="page">Bio</a></li>
+          <li><a href="/#approach">Approach on the Bench</a></li>
+          <li><a href="/#yard-signs">Yard Signs</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- HERO -->
+    <section class="dark hero" aria-label="Aaron Marcoux bio">
+      <div class="wrap">
+        <p class="kicker">Public Service &amp; Legal Experience</p>
+        <h1>Aaron Marcoux</h1>
+
+        <p class="subhead">
+          From the start of his education, Aaron Marcoux set out to serve in Wisconsin’s courts with the long-term goal of one day becoming a judge.
+          Throughout his career, he has consistently pursued that path through public service — working across the justice system, gaining experience from multiple perspectives, and remaining committed to the responsibilities and impact of the judicial role.
+        </p>
+
+        <p class="subhead">
+          His work reflects a continued dedication to contributing to and strengthening Wisconsin’s legal system through professionalism, preparation, and care in the administration of justice.
+        </p>
+
+        <p class="subhead"><strong>Fairness. Efficiency. Respect.</strong></p>
+
+        <div class="actions" aria-label="Page actions">
+          <a class="btn primary" href="/#about">Back to Home</a>
+          <a class="btn ghost" href="/#contact">Contact</a>
+        </div>
+
+        <div class="election-wrap" aria-label="Election Day">
+          <aside class="election" aria-label="Election Day notice">Election Day • April 7, 2026</aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIO CONTENT -->
+    <section class="section light" aria-label="Bio details">
+      <div class="wrap about">
+        <div class="about__text">
+          <h2>Experience in Wisconsin’s Courts</h2>
+
+          <p>
+            Throughout his career, Aaron Marcoux has pursued public service across the justice system — gaining experience from multiple perspectives and remaining committed to the responsibilities and impact of the judicial role.
+          </p>
+          <p>
+            His work reflects a continued dedication to contributing to and strengthening Wisconsin’s legal system through professionalism, preparation, and care in the administration of justice.
+          </p>
+
+          <div class="bio-blocks" aria-label="Career timeline">
+            <article class="bio-block">
+              <h3>Washburn County District Attorney (2019–Present)</h3>
+              <p>
+                In September 2019, following the resignation of the prior district attorney, Governor <strong>Tony Evers</strong> appointed Aaron Marcoux as Washburn County District Attorney.
+                He subsequently stood for election, was elected to the office in 2020, and re-elected in 2024.
+              </p>
+              <p>
+                As District Attorney, Marcoux is responsible for overseeing and prosecuting the county’s criminal caseload. His work emphasizes professional preparation, efficient case management, and timely court proceedings, while maintaining respect for the rights of all parties and the role of the court.
+              </p>
+            </article>
+
+            <article class="bio-block">
+              <h3>Assistant District Attorney — Washburn County (2019)</h3>
+              <p>
+                In August 2019, Marcoux joined the Washburn County District Attorney’s Office as the county’s first full-time Assistant District Attorney, a newly created position.
+                Prior to this, the county had operated with only a part-time ADA.
+              </p>
+              <p>
+                His time in this role coincided with leadership transitions within the office and provided additional experience managing criminal matters in Washburn County.
+              </p>
+            </article>
+
+            <article class="bio-block">
+              <h3>Assistant District Attorney — Sawyer County (2015–2019)</h3>
+              <p>
+                Marcoux served as an Assistant District Attorney in Sawyer County for four years, handling a broad criminal caseload. His work included a significant focus on drug-related and public safety cases, providing extensive courtroom experience and further developing his understanding of case preparation, evidentiary standards, and trial practice.
+              </p>
+            </article>
+
+            <article class="bio-block">
+              <h3>Wisconsin Assistant State Public Defender (2010–2015)</h3>
+              <p>
+                Aaron Marcoux began his legal career in public service as a Wisconsin Assistant State Public Defender in late 2010. Based in the Ashland office, he represented clients across Ashland, Bayfield, and Iron counties in northern Wisconsin.
+              </p>
+              <p>
+                Over five years in this role, he gained firsthand experience on the defense side of the justice system and developed a practical understanding of courtroom procedure, constitutional protections, and the importance of thoughtful, even-tempered advocacy.
+              </p>
+            </article>
+
+            <article class="bio-block">
+              <h3>Recognition &amp; Public Service</h3>
+              <p>
+                In 2024, Marcoux was named <strong>Distinguished Alumnus</strong> by the UW–Eau Claire–Barron County Foundation. A graduate of UW–Eau Claire–Barron County (Class of 2001), he received the honor at the May 2024 commencement ceremony in recognition of his public service and contributions to the community.
+              </p>
+            </article>
+
+            <article class="bio-block">
+              <h3>Judicial Candidacy (2026)</h3>
+              <p>
+                With more than a decade of experience serving Wisconsin’s public courts — as a public defender, prosecutor, and elected district attorney — Aaron Marcoux is a candidate for Washburn County Circuit Court Judge in the April 7, 2026 nonpartisan election. His background reflects broad experience across the justice system and a long-standing commitment to public service.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="about__media">
+          <picture>
+            <source type="image/webp" srcset="/aaron-Marcoux.webp" sizes="(max-width: 980px) 100vw, 40vw" />
+            <source type="image/jpeg" srcset="/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg" sizes="(max-width: 980px) 100vw, 40vw" />
+            <img
+              src="/aaron-Marcoux.webp"
+              alt="Aaron Marcoux, candidate for Washburn County Circuit Court Judge."
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap footer-grid">
+      <div>
+        <p>
+          Paid for by Aaron Marcoux (self-financed). Aaron Marcoux, Treasurer.<br />
+          Washburn County, WI • <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
+        </p>
+
+        <p id="privacy" class="fineprint">
+          <strong>Privacy &amp; data use:</strong> Information submitted through this website is used only to respond to your request or message and related campaign communications. We do not sell your information.
+        </p>
+
+        <p>© 2026 Aaron Marcoux</p>
+      </div>
+
+      <div>
+        <p class="footer-title">Connect</p>
+        <div class="footer-actions" aria-label="Social links">
+          <a class="footer-btn" href="https://www.facebook.com/MarcouxForJudge/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="footer-btn" href="https://www.instagram.com/marcouxforjudge/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== NON-CRITICAL CSS (match index pattern) ===== -->
+  <style>
+    .section{ padding: clamp(3.9rem, 7.5vw, 6.75rem) 0; }
+    .light{ background:#fff; color: var(--ink); }
+
+    h2{
+      font-family: var(--display);
+      margin:0 0 .85rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: clamp(1.9rem, 1.6vw + 1.15rem, 2.6rem);
+      line-height: 1.05;
+    }
+    p{
+      margin:0;
+      max-width: 78ch;
+      font-size: clamp(1.05rem, .35vw + 1rem, 1.18rem);
+    }
+    p + p{ margin-top: .95rem; }
+
+    .about{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: clamp(1.5rem, 3vw, 3rem);
+      grid-template-columns: 1.15fr .85fr;
+      gap: clamp(1.75rem, 3vw, 3rem);
       align-items: start;
     }
-    .bio__media{ margin:0; }
-    .bio__media picture,
-    .bio__media img{
+    .about__text{ text-align:left; }
+    .about__media{ margin:0; align-self: start; }
+    .about__media picture,
+    .about__media img{
       display:block;
-      width:100%
+      width:100%;
+      height:auto;
+      max-height: 520px;
+      object-fit: cover;
+      object-position: 50% 18%;
+      border-radius: 14px;
+      box-shadow: 0 14px 34px rgba(0,0,0,.18);
+      border: 1px solid rgba(10,23,48,.10);
+    }
+
+    /* Bio blocks */
+    .bio-blocks{ margin-top: 1.35rem; display:grid; gap: 1rem; }
+    .bio-block{
+      border: 1px solid rgba(10,23,48,.10);
+      border-radius: 14px;
+      padding: 1.1rem 1.1rem 1.05rem;
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 14px 34px rgba(0,0,0,.08);
+    }
+    .bio-block h3{
+      margin: 0 0 .45rem;
+      font-family: var(--display);
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      font-size: 1.18rem;
+      line-height: 1.2;
+    }
+    .bio-block p{ max-width:none; color: rgba(10,23,48,.86); }
+    .bio-block p + p{ margin-top: .75rem; }
+
+    .fineprint{
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: rgba(10,23,48,.72);
+    }
+
+    footer{
+      background:#fff;
+      color: var(--ink);
+      border-top: 1px solid rgba(10,23,48,.10);
+      padding: 2.35rem 0 2.85rem;
+    }
+    footer p{
+      color: rgba(10,23,48,.72);
+      font-size: 1rem;
+      max-width: none;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 1.6rem;
+      align-items: start;
+    }
+    .footer-title{
+      font-family: var(--display);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin: 0 0 .6rem;
+      font-size: 1.1rem;
+      color: var(--ink);
+    }
+    .footer-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      margin-top: .75rem;
+    }
+    .footer-btn{
+      appearance:none;
+      background: transparent;
+      border: 1px solid rgba(10,23,48,.18);
+      color: var(--ink);
+      padding: .70rem .95rem;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-weight: 800;
+      letter-spacing: .01em;
+      text-decoration:none;
+      cursor:pointer;
+      transition: transform 120ms ease, background-color 120ms ease;
+      line-height: 1;
+    }
+    .footer-btn:hover{ background: rgba(10,23,48,.05); }
+    .footer-btn:active{ transform: translateY(1px); }
+
+    @media (max-width: 980px){
+      .about{ grid-template-columns: 1fr; }
+      .about__media picture,
+      .about__media img{
+        max-height: none;
+        aspect-ratio: 4 / 3;
+      }
+      .footer-grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      // Mobile menu toggle (match index.html)
+      var nav = document.getElementById("site-nav");
+      var btn = nav && nav.querySelector(".menu-toggle");
+      if (nav && btn) {
+        btn.addEventListener("click", function () {
+          var isOpen = nav.getAttribute("data-open") === "true";
+          nav.setAttribute("data-open", String(!isOpen));
+          btn.setAttribute("aria-expanded", String(!isOpen));
+        });
+      }
+
+      // GA helpers (match index.html)
+      function sendEvent(name, params) {
+        if (typeof window.gtag !== "function") return;
+        window.gtag("event", name, Object.assign({ transport_type: "beacon" }, params || {}));
+      }
+
+      function linkText(a) {
+        return (a.getAttribute("aria-label") || a.textContent || "").trim().replace(/\s+/g, " ").slice(0, 120);
+      }
+
+      // Track ALL link clicks (internal + external)
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest("a");
+        if (!a) return;
+
+        var href = a.getAttribute("href");
+        if (!href || href === "#" || href.startsWith("javascript:")) return;
+
+        var isExternal = false;
+        var url = href;
+
+        try {
+          var u = new URL(href, location.href);
+          url = u.href;
+          isExternal = (u.origin !== location.origin);
+        } catch (_) {}
+
+        sendEvent("link_click", {
+          link_url: url,
+          link_text: linkText(a) || "(no text)",
+          link_type: href.startsWith("#") ? "hash" : (href.startsWith("mailto:") ? "mailto" : (href.startsWith("tel:") ? "tel" : (isExternal ? "external" : "internal"))),
+          link_target: a.getAttribute("target") || "(none)"
+        });
+      }, true);
+    })();
+  </script>
+</body>
+</html>
