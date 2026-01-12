@@ -25,16 +25,19 @@
   <meta property="og:title" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
   <meta property="og:description" content="Focused on fairness, efficiency, and respect. Election Day: April 7, 2026. Washburn County, WI." />
   <meta property="og:url" content="https://marcoux2026.com/" />
-  <!-- Optional: add a dedicated social share image at site root, then uncomment -->
-  <!-- <meta property="og:image" content="https://marcoux2026.com/og-image.jpg" /> -->
-  <!-- <meta property="og:image:alt" content="Aaron Marcoux for Washburn County Circuit Court Judge" /> -->
+  <meta property="og:image" content="https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg" />
+  <meta property="og:image:secure_url" content="https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:alt" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
   <meta name="twitter:description" content="Focused on fairness, efficiency, and respect. Election Day: April 7, 2026. Washburn County, WI." />
-  <!-- Optional: add a dedicated social share image at site root, then uncomment -->
-  <!-- <meta name="twitter:image" content="https://marcoux2026.com/og-image.jpg" /> -->
+  <meta name="twitter:image" content="https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg" />
+  <meta name="twitter:image:alt" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
 
   <!-- Hosted fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -64,7 +67,10 @@
           "addressCountry":"US"
         },
         "email":"mailto:marcoux2026@gmail.com",
-        "image":"https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg",
+        "image":[
+          "https://marcoux2026.com/Aaron%20Marcoux.webp",
+          "https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
+        ],
         "sameAs":[
           "https://www.facebook.com/MarcouxForJudge/",
           "https://www.instagram.com/marcouxforjudge/"
@@ -75,16 +81,14 @@
   </script>
 
   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCPW3QVEV3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCPW3QVEV3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LCPW3QVEV3');
+  </script>
 
-        gtag('config', 'G-LCPW3QVEV3');
-    </script>
-
-  
   <style>
     :root{
       --navy:#071a33;
@@ -323,6 +327,7 @@
     }
     .about__text{ text-align:left; }
     .about__media{ margin:0; align-self: start; }
+    .about__media picture,
     .about__media img{
       display:block;
       width:100%;
@@ -421,6 +426,11 @@
     .dark .fine-print,
     .dark .fineprint{ color: var(--white-muted); }
 
+    .privacy-ref{
+      margin-top: .65rem;
+      font-size: .98rem;
+    }
+
     /* Footer */
     footer{
       background:#fff;
@@ -474,6 +484,7 @@
     /* Responsive */
     @media (max-width: 980px){
       .about{ grid-template-columns: 1fr; }
+      .about__media picture,
       .about__media img{
         max-height: none;
         aspect-ratio: 4 / 3;
@@ -565,14 +576,27 @@
         </div>
 
         <figure class="about__media">
-          <img
-            src="/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
-            alt="Aaron Marcoux, candidate for Washburn County Circuit Court Judge."
-            width="800"
-            height="600"
-            loading="lazy"
-            decoding="async"
-          />
+          <!-- WebP-first with JPEG fallback for broader compatibility -->
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/Aaron%20Marcoux.webp 1x, /Aaron%20Marcoux.webp 2x"
+              sizes="(max-width: 980px) 100vw, 40vw"
+            />
+            <source
+              type="image/jpeg"
+              srcset="/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg 1x, /aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg 2x"
+              sizes="(max-width: 980px) 100vw, 40vw"
+            />
+            <img
+              src="/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
+              alt="Aaron Marcoux, candidate for Washburn County Circuit Court Judge."
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </figure>
       </div>
     </section>
@@ -624,17 +648,14 @@
               <input id="ys-address" name="address" type="text" autocomplete="street-address" required />
             </div>
 
-            <div class="row">
-              <label for="ys-qty">Number of signs (1–5)</label>
-              <input id="ys-qty" name="number_of_signs" type="number" min="1" max="5" step="1" required />
-            </div>
-          </div>
-
-          <input type="hidden" name="_subject" value="Yard Sign Request — Marcoux 2026" />
+           <input type="hidden" name="_subject" value="Yard Sign Request — Marcoux 2026" />
 
           <button class="btn primary" type="submit">Submit Request</button>
 
           <p class="fineprint">By submitting, you consent to be contacted about your request.</p>
+          <p class="fineprint privacy-ref">
+            Privacy note: Please see <a href="#privacy">data use</a> below.
+          </p>
         </form>
       </div>
     </section>
@@ -675,6 +696,10 @@
           <input type="hidden" name="_subject" value="Campaign Contact — Marcoux 2026" />
 
           <button class="btn primary" type="submit">Send Message</button>
+
+          <p class="fineprint privacy-ref">
+            Privacy note: Please see <a href="#privacy">data use</a> below.
+          </p>
         </form>
       </div>
     </section>
@@ -684,9 +709,14 @@
     <div class="wrap footer-grid">
       <div>
         <p>
-          Paid for by Aaron Marcoux (self financed). Aaron Marcoux, Treasurer.<br />
+          Paid for by Aaron Marcoux (self-financed). Aaron Marcoux, Treasurer.<br />
           Washburn County, WI • <a href="mailto:marcoux2026@gmail.com">marcoux2026@gmail.com</a>
         </p>
+
+        <p id="privacy" class="fine-print">
+          <strong>Privacy &amp; data use:</strong> Information submitted through this website is used only to respond to your request or message and related campaign communications. We do not sell your information.
+        </p>
+
         <p>© 2026 Aaron Marcoux</p>
       </div>
 
