@@ -10,7 +10,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="theme-color" content="#041122" />
 
-  <!-- Canonical (update if you ever publish on a different primary URL) -->
+  <!-- Canonical -->
   <link rel="canonical" href="https://marcoux2026.com/" />
 
   <!-- Favicons (place favicon.ico + favicon.png at site root) -->
@@ -18,9 +18,10 @@
   <link rel="icon" href="/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Marcoux 2026" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Aaron Marcoux for Washburn County Circuit Court Judge" />
   <meta property="og:description" content="Focused on fairness, efficiency, and respect. Election Day: April 7, 2026. Washburn County, WI." />
   <meta property="og:url" content="https://marcoux2026.com/" />
@@ -44,23 +45,46 @@
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Aaron Marcoux",
-    "jobTitle":"Candidate for Washburn County Circuit Court Judge",
-    "address":{
-      "@type":"PostalAddress",
-      "addressRegion":"WI",
-      "addressLocality":"Washburn County"
-    },
-    "email":"mailto:marcoux2026@gmail.com",
-    "image":"https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg",
-    "sameAs":[
-      "https://www.facebook.com/MarcouxForJudge/",
-      "https://www.instagram.com/marcouxforjudge/"
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://marcoux2026.com/#website",
+        "name":"Marcoux 2026",
+        "url":"https://marcoux2026.com/"
+      },
+      {
+        "@type":"Person",
+        "@id":"https://marcoux2026.com/#aaron-marcoux",
+        "name":"Aaron Marcoux",
+        "jobTitle":"Candidate for Washburn County Circuit Court Judge",
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Washburn County",
+          "addressRegion":"WI",
+          "addressCountry":"US"
+        },
+        "email":"mailto:marcoux2026@gmail.com",
+        "image":"https://marcoux2026.com/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg",
+        "sameAs":[
+          "https://www.facebook.com/MarcouxForJudge/",
+          "https://www.instagram.com/marcouxforjudge/"
+        ]
+      }
     ]
   }
   </script>
 
+  <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCPW3QVEV3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LCPW3QVEV3');
+    </script>
+
+  
   <style>
     :root{
       --navy:#071a33;
@@ -182,6 +206,7 @@
       font-size: clamp(1.05rem, .35vw + 1rem, 1.18rem);
     }
     p + p{ margin-top: .95rem; }
+
     .section-lede{
       margin-top: .35rem;
       max-width: 78ch;
@@ -310,24 +335,29 @@
       border: 1px solid rgba(10,23,48,.10);
     }
 
-    /* PRIORITIES */
-    .priorities p{
+    /* APPROACH */
+    .approach p{
       font-size: clamp(1.12rem, .45vw + 1.05rem, 1.28rem);
     }
-    .priorities .tagline{
+    .approach .tagline{
       margin:0;
       font-family: var(--display);
       font-weight: 900;
       letter-spacing: -0.02em;
       color: var(--white-ink);
     }
-    .priorities ul{
+    .approach ul{
       margin: 1.35rem 0 0;
       padding-left: 1.15rem;
       max-width: 78ch;
       font-size: clamp(1.10rem, .45vw + 1.05rem, 1.28rem);
     }
-    .priorities li{ margin: .85rem 0; }
+    .approach li{ margin: .85rem 0; }
+    .approach li strong{
+      font-family: var(--display);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+    }
 
     /* Forms */
     form{ margin-top: 1.35rem; max-width: 860px; }
@@ -380,11 +410,15 @@
       filter: none;
     }
 
+    /* Fine print (readable on both backgrounds) */
+    .fine-print,
     .fineprint{
       margin-top: 1rem;
-      color: rgba(10,23,48,.72);
       font-size: 1rem;
     }
+    .light .fine-print,
+    .light .fineprint{ color: rgba(10,23,48,.72); }
+    .dark .fine-print,
     .dark .fineprint{ color: var(--white-muted); }
 
     /* Footer */
@@ -463,10 +497,9 @@
       <nav aria-label="Primary">
         <a class="brand" href="#top">Marcoux 2026</a>
 
-        <!-- No CTAs in header (navigation only) -->
         <ul class="links" role="list">
           <li><a href="#about">About</a></li>
-          <li><a href="#priorities">Priorities</a></li>
+          <li><a href="#approach">Approach on the Bench</a></li>
           <li><a href="#yard-signs">Yard Signs</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -488,8 +521,11 @@
 
         <div class="actions" aria-label="Primary actions">
           <a class="btn primary" href="#yard-signs">Request a Yard Sign</a>
-          <a class="btn ghost" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarcoux2026.com%2F"
-             target="_blank" rel="noopener noreferrer">Share on Facebook</a>
+          <a class="btn ghost"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarcoux2026.com%2F"
+             target="_blank" rel="noopener noreferrer">
+            Share on Facebook
+          </a>
         </div>
 
         <div class="election-wrap" aria-label="Election Day">
@@ -501,7 +537,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section light" aria-label="About">
+    <section id="about" class="section light" aria-label="About Aaron Marcoux">
       <div class="wrap about">
         <div class="about__text">
           <h2>About Aaron</h2>
@@ -531,7 +567,7 @@
         <figure class="about__media">
           <img
             src="/aaron-marcoux-washburn-county-circuit-court-judge-2026.jpg"
-            alt="Aaron Marcoux headshot"
+            alt="Aaron Marcoux, candidate for Washburn County Circuit Court Judge."
             width="800"
             height="600"
             loading="lazy"
@@ -541,18 +577,18 @@
       </div>
     </section>
 
-    <!-- PRIORITIES -->
-    <section id="priorities" class="section dark priorities" aria-label="Priorities">
+    <!-- APPROACH -->
+    <section id="approach" class="section dark approach" aria-label="Approach on the Bench">
       <div class="wrap">
-        <h2>Priorities</h2>
+        <h2>Approach on the Bench</h2>
 
         <p class="tagline">Experience. Fairness. Respect.</p>
 
         <ul role="list">
-          <li>Prepared and even-tempered in the courtroom</li>
-          <li>Fair and impartial application of the law</li>
-          <li>Efficient case management to support timely court proceedings</li>
-          <li>Respect for every person who comes before the court</li>
+          <li><strong>Prepared and even-tempered</strong> in the courtroom</li>
+          <li><strong>Impartial application of the law</strong>, guided by the facts and the record</li>
+          <li><strong>Efficient case management</strong> that supports timely court proceedings</li>
+          <li><strong>Respect</strong> for every person who comes before the court</li>
         </ul>
       </div>
     </section>
@@ -609,6 +645,10 @@
         <h2>Contact the Campaign</h2>
         <p class="section-lede">Share a question or message and we will respond as we’re able.</p>
 
+        <p id="contact-legal-disclaimer" class="fine-print">
+          Due to the judicial campaign context, we cannot respond to legal advice requests.
+        </p>
+
         <form action="https://formspree.io/f/xzdznjyz" method="post">
           <div class="grid">
             <div class="row">
@@ -628,7 +668,7 @@
 
             <div class="row full">
               <label for="c-message">Message</label>
-              <textarea id="c-message" name="message" rows="5" required></textarea>
+              <textarea id="c-message" name="message" rows="5" aria-describedby="contact-legal-disclaimer" required></textarea>
             </div>
           </div>
 
