@@ -6,37 +6,157 @@
   <title>Page Not Found | Marcoux 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Page not found — Aaron Marcoux for Washburn County Circuit Court Judge. Election Day: April 7, 2026." />
+  <meta name="robots" content="noindex,follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="theme-color" content="#041122" />
+
+  <!-- Hosted fonts (match site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCPW3QVEV3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCPW3QVEV3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LCPW3QVEV3');
+  </script>
 
-        gtag('config', 'G-LCPW3QVEV3');
-    </script>
-  
   <style>
-    /* --- Base reset --- */
-    *, *::before, *::after { box-sizing: border-box; }
+    :root{
+      --navy:#071a33;
+      --navy2:#041122;
 
-    html, body {
-      height: 100%;
-      margin: 0;
+      --ink:#0a1730;
+
+      --white-ink:rgba(255,255,255,.93);
+      --white-muted:rgba(255,255,255,.80);
+
+      --accent:#b21f2d;
+
+      --max:1100px;
+      --display:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      --body:"Manrope", var(--display);
+
+      --space-lg: 1.25rem;
     }
 
-    /* --- Page styling --- */
+    /* --- Base reset --- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+
     body{
+      min-height: 100%;
+      font-family: var(--body);
+      line-height: 1.55;
+      background:
+        radial-gradient(1200px 650px at 50% 18%, rgba(255,255,255,.09), transparent 62%),
+        linear-gradient(180deg, var(--navy), var(--navy2));
+      color: var(--white-ink);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    a{ color:inherit; text-underline-offset:.2em; }
+    a:hover{ text-decoration-thickness:2px; }
+    :focus-visible{ outline:2px solid currentColor; outline-offset:3px; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+
+    /* Skip link (match site) */
+    .skip-link{
+      position:absolute; left:.75rem; top:.75rem; z-index: 50;
+      padding:.5rem .75rem;
+      background: rgba(0,0,0,.55);
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:999px;
+      transform: translateY(-220%);
+      transition: transform 160ms ease;
+      text-decoration: none;
+    }
+    .skip-link:focus{ transform: translateY(0); }
+
+    /* Header / Nav (match site) */
+    header{
+      position: sticky; top:0; z-index: 20;
+      background: rgba(4,17,34,.80);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding: .95rem 0;
+    }
+    .brand{
+      font-family: var(--display);
+      font-weight: 800;
+      letter-spacing:.01em;
+      text-decoration:none;
+      font-size: 1.05rem;
+      white-space: nowrap;
+    }
+    .links{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      gap:1rem;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+    .links a{
+      text-decoration:none;
+      color: rgba(255,255,255,.82);
+      font-weight: 700;
+      font-size: .98rem;
+    }
+    .links a:hover{ color: rgba(255,255,255,.97); }
+
+    .menu-toggle{ display:none; }
+
+    @media (max-width: 720px){
+      nav{ align-items:flex-start; }
+      .menu-toggle{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        gap:.5rem;
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.18);
+        color: var(--white-ink);
+        border-radius: 999px;
+        padding: .55rem .85rem;
+        font-family: var(--display);
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .links{
+        display:none;
+        width: 100%;
+        padding-top: .65rem;
+      }
+      nav[data-open="true"] .links{ display:flex; }
+    }
+
+    /* --- 404 Page styling --- */
+    main{
       position: relative;
+      min-height: calc(100vh - 72px);
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #0b1f3a; /* dark judicial blue */
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-      overflow: hidden; /* ensures the big 404 never scrolls */
+      padding: clamp(3.25rem, 7vw, 5rem) 0;
+      overflow: hidden;
     }
 
     /* Full-page spanning 404 */
@@ -49,77 +169,81 @@
       user-select: none;
       z-index: 0;
     }
-
     .bg-404 span{
-      font-weight: 900;
+      font-family: var(--display);
+      font-weight: 800;
       letter-spacing: 0.02em;
       line-height: 1;
-      /* Blue-grey at 80% opacity */
-      color: rgba(150, 170, 185, 0.8);
-      /* Responsive “full page spanning” scale */
+      color: rgba(150, 170, 185, 0.50); /* blue-grey @ 50% opacity */
       font-size: clamp(9rem, 28vw, 22rem);
       transform: translateY(0.02em);
       white-space: nowrap;
     }
 
-    main{
+    .card{
       position: relative;
       z-index: 1;
       width: 100%;
       max-width: 720px;
       padding: 2rem 1.5rem;
+      text-align: center;
     }
 
     hr{
       border: 0;
       height: 1px;
-      background-color: rgba(255, 255, 255, 0.35);
+      background-color: rgba(255, 255, 255, 0.22);
       margin: 1.5rem 0;
     }
 
-    /* --- Typography --- */
+    h1,h2,h3{
+      margin: 0;
+      font-family: var(--display);
+    }
+
     h1{
-      font-size: 3rem; /* ~48px */
-      font-weight: 900; /* Arial Black equivalent */
-      margin: 0;
-      letter-spacing: 0.02em;
+      font-size: clamp(2.25rem, 4.6vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.01em;
     }
-
     h2{
-      font-size: 1.5rem; /* ~24px */
-      font-weight: 300; /* narrow / light feel */
-      margin: 0.5rem 0;
-      letter-spacing: 0.15em;
+      font-size: 1rem;
+      font-weight: 700;
+      margin: .5rem 0;
+      letter-spacing: .14em;
       text-transform: uppercase;
+      color: var(--white-muted);
     }
-
     h3{
-      font-size: 1.5rem; /* ~24px */
-      font-weight: 900; /* Arial Black equivalent */
-      margin: 0;
+      font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+      font-weight: 800;
       line-height: 1.3;
+      letter-spacing: -0.01em;
     }
 
     .election-date{
-      margin: 0.75rem 0 0;
-      font-size: 1rem;
+      margin: 0.85rem 0 0;
+      font-size: .98rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      opacity: 0.85;
+      opacity: 0.9;
+      font-family: var(--display);
+      font-weight: 800;
     }
 
     .not-found{
-      margin: 1.25rem 0 0;
+      margin: 1.25rem auto 0;
       font-size: 1.05rem;
       opacity: 0.92;
+      max-width: 58ch;
     }
 
     .home-link{
       display: inline-block;
       margin-top: 1.1rem;
-      color: #ffffff;
-      font-weight: 700;
-      letter-spacing: 0.02em;
+      font-family: var(--display);
+      font-weight: 800;
+      letter-spacing: 0.01em;
       text-decoration: none;
       border-bottom: 2px solid rgba(255,255,255,0.45);
       padding-bottom: 0.15rem;
@@ -127,38 +251,104 @@
     .home-link:hover{
       border-bottom-color: rgba(255,255,255,0.85);
     }
-    .home-link:focus-visible{
-      outline: 2px solid rgba(255,255,255,0.95);
-      outline-offset: 4px;
-      border-bottom-color: rgba(255,255,255,0.85);
-    }
-
-    /* --- Responsive scaling --- */
-    @media (max-width: 480px){
-      h1{ font-size: 2.25rem; }
-      h2, h3{ font-size: 1.25rem; }
-    }
   </style>
 </head>
 
 <body>
-  <div class="bg-404" aria-hidden="true">
-    <span>404</span>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <main role="main" aria-label="Page not found">
-    <hr />
-    <h1>Aaron Marcoux</h1>
-    <h2>for</h2>
-    <h3>Washburn County Circuit Court Judge</h3>
-    <hr />
-    <p class="election-date">Election Day • April 7, 2026</p>
+  <header role="banner">
+    <div class="wrap">
+      <nav aria-label="Primary" id="site-nav" data-open="false">
+        <a class="brand" href="/">Marcoux 2026</a>
 
-    <p class="not-found">
-      This page could not be found.
-    </p>
+        <button class="menu-toggle" type="button" aria-controls="primary-links" aria-expanded="false">
+          Menu
+        </button>
 
-    <a class="home-link" href="/">Return Home</a>
+        <ul class="links" id="primary-links" role="list">
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#approach">Approach on the Bench</a></li>
+          <li><a href="/#yard-signs">Yard Signs</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main" aria-label="Page not found">
+    <div class="bg-404" aria-hidden="true">
+      <span>404</span>
+    </div>
+
+    <div class="card">
+      <hr />
+      <h1>Aaron Marcoux</h1>
+      <h2>for</h2>
+      <h3>Washburn County Circuit Court Judge</h3>
+      <hr />
+
+      <p class="election-date">Election Day • April 7, 2026</p>
+
+      <p class="not-found">
+        This page could not be found.
+      </p>
+
+      <a class="home-link" href="/">Return Home</a>
+    </div>
   </main>
+
+  <script>
+    (function () {
+      // Mobile menu toggle (match site)
+      var nav = document.getElementById("site-nav");
+      var btn = nav && nav.querySelector(".menu-toggle");
+      if (nav && btn) {
+        btn.addEventListener("click", function () {
+          var isOpen = nav.getAttribute("data-open") === "true";
+          nav.setAttribute("data-open", String(!isOpen));
+          btn.setAttribute("aria-expanded", String(!isOpen));
+        });
+      }
+
+      // GA helper
+      function sendEvent(name, params) {
+        if (typeof window.gtag !== "function") return;
+        window.gtag("event", name, Object.assign({ transport_type: "beacon" }, params || {}));
+      }
+
+      function linkText(a) {
+        return (a.getAttribute("aria-label") || a.textContent || "")
+          .trim()
+          .replace(/\s+/g, " ")
+          .slice(0, 120);
+      }
+
+      // Track ALL link clicks (internal + external)
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest("a");
+        if (!a) return;
+
+        var href = a.getAttribute("href");
+        if (!href || href === "#" || href.startsWith("javascript:")) return;
+
+        var isExternal = false;
+        var url = href;
+
+        try {
+          var u = new URL(href, location.href);
+          url = u.href;
+          isExternal = (u.origin !== location.origin);
+        } catch (_) {}
+
+        sendEvent("link_click", {
+          link_url: url,
+          link_text: linkText(a) || "(no text)",
+          link_type: href.startsWith("#") ? "hash" : (href.startsWith("mailto:") ? "mailto" : (href.startsWith("tel:") ? "tel" : (isExternal ? "external" : "internal"))),
+          link_target: a.getAttribute("target") || "(none)"
+        });
+      }, true);
+    })();
+  </script>
 </body>
 </html>
