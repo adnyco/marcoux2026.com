@@ -245,14 +245,15 @@
       letter-spacing: -0.01em;
     }
 
-    .hero-meta{
-      margin-top: 1.65rem;
-      display:flex;
-      flex-wrap: wrap;
-      gap:.75rem;
-      align-items:center;
-      justify-content:center;
-    }
+.election-wrap{ margin: 1.65rem auto 0; display:flex; justify-content:center; }
+.locale{
+  margin: 1rem 0 0;
+  color: var(--white-muted);
+  letter-spacing:.03em;
+  font-weight: 600;
+  text-align: center;
+}
+
     aside.election{
       display:inline-block;
       padding: .85rem 1rem;
@@ -266,21 +267,6 @@
       box-shadow: 0 16px 44px rgba(0,0,0,.38);
       line-height: 1;
     }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: .72rem 1rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.20);
-      background: rgba(255,255,255,.06);
-      font-family: var(--display);
-      font-weight: 800;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      font-size: .92rem;
-    }
-
     .menu-toggle{ display:none; }
     @media (max-width: 720px){
       nav{ align-items:flex-start; }
@@ -341,17 +327,17 @@
           Fairness • Efficiency • Respect
         </p>
 
-        <div class="hero-meta" aria-label="Key campaign details">
-          <aside class="election" aria-label="Election Day notice">Election Day • April 7, 2026</aside>
-          <span class="pill" aria-label="Location">Washburn County, WI</span>
-        </div>
+        <div class="election-wrap" aria-label="Election Day">
+  <aside class="election" aria-label="Election Day notice">Election Day • April 7, 2026</aside>
+</div>
+<p class="locale">Washburn County, WI</p>
       </div>
     </section>
 
     <section class="section light" aria-label="Experience details">
       <div class="wrap bio">
         <div class="bio__text">
-          <h2>Background &amp; Commitment to Public Service</h2>
+          <h2>Commitment to Public Service</h2>
 
           <p>
             Aaron Marcoux’s legal career reflects sustained preparation for the responsibilities of judicial service. Through public service across Wisconsin’s court system, he has gained experience from multiple perspectives while maintaining a consistent focus on professionalism, impartiality, and the careful administration of justice.
@@ -361,7 +347,7 @@
             A lifelong Wisconsin resident, Aaron lives in <strong>Shell Lake, Wisconsin</strong>, and has served Washburn County in various legal roles since 2019.
           </p>
 
-          <h2 class="bio__h2">Legal Experience Across the Justice System</h2>
+          <h2 class="bio__h2">Experience Across Wisconsin’s Courts</h2>
 
           <article class="role" aria-label="Washburn County District Attorney">
             <h3>Washburn County District Attorney (2019–Present)</h3>
@@ -394,12 +380,41 @@
             </p>
           </article>
 
-          <h2 class="bio__h2">Recognition &amp; Community Involvement</h2>
-          <p>
-            In <strong>2024</strong>, Marcoux was named <strong>Distinguished Alumnus</strong> by the <strong>UW–Eau Claire–Barron County Foundation</strong>, where he earned his associate degree in 2001. The honor recognized his record of public service and professional contributions within Wisconsin’s legal system.
-          </p>
+          <h2 class="bio__h2">Community &amp; Professional Recognition</h2>
 
-          <h2 class="bio__h2">2026 Judicial Candidacy</h2>
+<p class="bio__lede">
+  Aaron Marcoux’s contributions have been recognized by local and statewide institutions, both for his legal service and his leadership in the community.
+</p>
+
+<article class="role" aria-label="2024 UW–Eau Claire–Barron County Distinguished Alumnus">
+  <h3>2024 — UW–Eau Claire–Barron County Distinguished Alumnus</h3>
+  <p>
+    Marcoux was honored by his alma mater as the 2024 Distinguished Alumnus, recognizing his public service and professional integrity as Washburn County’s District Attorney.
+  </p>
+</article>
+
+<article class="role" aria-label="2021 WEDC Success Story for Community Leadership">
+  <h3>2021 — WEDC “Success Story” for Community Leadership</h3>
+  <p>
+    During the COVID-19 pandemic, Marcoux helped lead Community First Washburn County, coordinating emergency food distribution and support services for local residents. The Wisconsin Economic Development Corporation featured this effort as a statewide model of rural response.
+  </p>
+</article>
+
+<article class="role" aria-label="2019 Appointment as District Attorney">
+  <h3>2019 — Appointment as District Attorney</h3>
+  <p>
+    Governor Tony Evers appointed Marcoux to fill a vacancy as Washburn County District Attorney, citing his local ties, integrity, and practical ideas for strengthening the justice system.
+  </p>
+</article>
+
+<article class="role" aria-label="2013 Wisconsin Court System Mention">
+  <h3>2013 — Wisconsin Court System Mention</h3>
+  <p>
+    As an Assistant State Public Defender, Marcoux was part of a county team selected for the state’s Evidence-Based Decision Making initiative. His participation was noted in the Wisconsin court system’s newsletter, <em>The Third Branch</em>.
+  </p>
+</article>
+
+          <h2 class="bio__h2">2026 Nonpartisan Judicial Election</h2>
           <p>
             Aaron Marcoux is a candidate for <strong>Washburn County Circuit Court Judge</strong> in the nonpartisan Spring Election on <strong>April 7, 2026</strong>. His candidacy reflects broad experience across Wisconsin’s justice system and a continued commitment to the responsibilities of judicial service, including fairness, efficiency, and respect for every person who comes before the court.
           </p>
